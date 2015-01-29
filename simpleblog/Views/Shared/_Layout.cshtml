@@ -18,8 +18,12 @@
       </header>
 
       @RenderBody()
+
       <footer>
           &copy; @DateTime.UtcNow.Year - Me
       </footer>
+
+      @RenderSection("Scripts", false)
+
   </body>
 </html>
