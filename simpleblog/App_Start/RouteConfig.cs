@@ -11,6 +11,8 @@ namespace simpleblog
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            var namespaces = new[] { typeof(PostsController) };
+
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute("Login", "login", new { controller = "Auth", action = "Login" });
