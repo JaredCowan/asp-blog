@@ -8,5 +8,9 @@ namespace simpleblog.Controllers
 {
     public class PostsController : Controller
     {
+        public ActionResult Index()
+        {
+            return Content("Hello, world!");
+        }
     }
 }
