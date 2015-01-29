@@ -10,7 +10,7 @@ namespace simpleblog.Controllers
     {
         public ActionResult Index()
         {
-            return Content("Hello, world!");
+            return Content("Thriii By Verde Circle");
         }
     }
 }
