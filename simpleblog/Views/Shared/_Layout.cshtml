@@ -1,21 +1,25 @@
 ﻿@{
     Layout = null;
 }
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
       <meta name="viewport" content="width=device-width" />
-      <title></title>
+      <title>@ViewBag.Title - Blog</title>
   </head>
   <body>
       <header>
           <h1>
-              Simple Blog
+              <a href="@Url.RouteUrl("home")">Blog</a>
           </h1>
+          <p>
+            <a href="@Url.RouteUrl("login")">Login</a>
+          </p>
       </header>
 
       @RenderBody()
-
+      <footer>
+          &copy; @DateTime.UtcNow.Year - Me
+      </footer>
   </body>
 </html>
