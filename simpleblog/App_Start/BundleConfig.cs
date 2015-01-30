@@ -21,13 +21,13 @@ namespace simpleblog.App_Start
             bundles.Add(new ScriptBundle("~/scripts")
                 .Include("~/scripts/jquery-2.1.3.js")
                 .Include("~/scripts/jquery.validate.js")
-                .Include("~/scripts/jquery.unobtrusive.js")
+                .Include("~/scripts/jquery.validate.unobtrusive.js")
                 .Include("~/scripts/bootstrap.js"));
 
             bundles.Add(new ScriptBundle("~/admin/scripts")
                 .Include("~/scripts/jquery-2.1.3.js")
                 .Include("~/scripts/jquery.validate.js")
-                .Include("~/scripts/jquery.unobtrusive.js")
+                .Include("~/scripts/jquery.validate.unobtrusive.js")
                 .Include("~/scripts/bootstrap.js"));
         }
     }
