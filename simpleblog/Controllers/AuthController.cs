@@ -11,13 +11,17 @@ namespace simpleblog.Controllers
     {
         public ActionResult Login()
         {
-            return View();
+            return View(new AuthLogin
+            {
+                Test = "This is my test value set."
+            });
         }
 
         [HttpPost]
         public ActionResult Login(AuthLogin form)
         {
-            return Content("Hi," + form.Username);
+            form.Test = "This is the new form value.";
+            return View(form);
         }
     }
 }
