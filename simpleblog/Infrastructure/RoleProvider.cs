@@ -9,7 +9,9 @@ namespace simpleblog.Infrastructure
     {
          public override string[] GetRolesForUser(string username)
          {
-             return new[] {"admin"};
+             if (username == "jared")
+                 return new[] {"admin"};
+             return new string[] {};
          }
         
         public override bool IsUserInRole(string username, string roleName)

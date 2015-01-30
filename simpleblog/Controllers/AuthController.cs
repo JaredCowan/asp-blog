@@ -18,14 +18,17 @@ namespace simpleblog.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(AuthLogin form)
+        public ActionResult Login(AuthLogin form, string returnUrl)
         {
             if (!ModelState.IsValid)
                 return View(form);
 
             FormsAuthentication.SetAuthCookie(form.Username, true);
 
-            return Content("The form is valid!");
+            if (!string.IsNullOrWhiteSpace(returnUrl))
+                return Redirect(returnUrl);
+
+            return RedirectToRoute("home");
         }
     }
 }

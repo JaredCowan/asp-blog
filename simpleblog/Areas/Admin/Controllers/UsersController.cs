@@ -11,7 +11,7 @@ namespace simpleblog.Areas.Admin.Controllers
     {
         public ActionResult Index()
         {
-            return Content("Inside Users Controller");
+            return Content("Inside admin Users Controller");
         }
     }
 }
