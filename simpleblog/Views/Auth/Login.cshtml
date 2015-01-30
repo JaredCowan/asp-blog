@@ -4,12 +4,10 @@
     ViewBag.Title = "Login";
 }
 
-<p>
-    The vale of test is our model, is: @Model.Test
-</p>
-
 @using (Html.BeginForm())
 {
+    @Html.ValidationSummary()
+    
     <div>
         @Html.LabelFor(x => x.Username)
         @Html.EditorFor(x => x.Username)

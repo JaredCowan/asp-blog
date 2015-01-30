@@ -13,15 +13,22 @@ namespace simpleblog.Controllers
         {
             return View(new AuthLogin
             {
-                Test = "This is my test value set."
             });
         }
 
         [HttpPost]
         public ActionResult Login(AuthLogin form)
         {
-            form.Test = "This is the new form value.";
-            return View(form);
+            if (!ModelState.IsValid)
+                return View(form);
+
+            if (form.Username != "rainbow dash")
+            {
+                ModelState.AddModelError("Username", "Invalid username or password.");
+                return View(form);
+            }
+
+            return Content("The form is valid!");
         }
     }
 }
