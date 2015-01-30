@@ -17,6 +17,12 @@ namespace simpleblog.Controllers
             });
         }
 
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToRoute("home");
+        }
+
         [HttpPost]
         public ActionResult Login(AuthLogin form, string returnUrl)
         {
