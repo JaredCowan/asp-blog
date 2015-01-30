@@ -8,7 +8,6 @@ namespace simpleblog.Areas.Admin.Controllers
 {
     public class PostsController : Controller
     {
-        // GET: Admin/Posts
         public ActionResult Index()
         {
             return Content("Inside admin post controller");
