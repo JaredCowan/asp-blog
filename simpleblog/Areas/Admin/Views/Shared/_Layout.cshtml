@@ -1,20 +1,36 @@
 ﻿@using System.Web.Optimization
+
 @{
     Layout = null;
 }
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta name="viewport" content="width=device-width" />
     <title>Blog Admin</title>
     @Styles.Render("~/admin/styles")
-</head>
-<body>
+  </head>
+  <body>
+
+    <div class="container">
+      <ul class="nav nav-pills">
+        <li>
+          @Html.ActionLink("Posts", "Index", "Posts", new{area="admin"}, new{})
+        </li>
+        <li>
+          @Html.ActionLink("Users", "Index", "Users", new{area="admin"}, new{})
+        </li>
+        <li>
+          @Html.RouteLink("Back to website", "Home")
+        </li>
+      </ul>
+    </div>
 
     @RenderBody()
-    <h1>Admin Layout</h1>
+
     @Scripts.Render("~/admin/scripts")
     @RenderSection("Scripts", false)
 
-</body>
+  </body>
 </html>
