@@ -1,0 +1,21 @@
+﻿@model simpleblog.Areas.Admin.ViewModels.UsersEdit
+
+<h1>Edit User @Model.Username</h1>
+
+@using (Html.BeginForm())
+{
+  @Html.ValidationSummary()
+
+  <div class="form-group">
+    @Html.LabelFor(f => f.Username)
+    @Html.TextBoxFor(f => f.Username, new {@class = "form-control"})
+  </div>
+
+  <div class="form-group">
+    @Html.LabelFor(f => f.Email)
+    @Html.TextBoxFor(f => f.Email, new {@class = "form-control", type = "email"})
+  </div>
+  
+  <input type="submit" value="Update User" class="btn btn-warning"/>
+  <a href="@Url.Action("index")" class="pull-right btn btn-info">Cancel</a>
+}

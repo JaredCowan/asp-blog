@@ -23,4 +23,13 @@ namespace simpleblog.Areas.Admin.ViewModels
         [Required, MaxLength(255), DataType(DataType.EmailAddress)]
         public string Email { get; set; }
     }
+
+    public class UsersEdit
+    {
+        [Required, MaxLength(128)]
+        public string Username { get; set; }
+
+        [Required, MaxLength(255), DataType(DataType.EmailAddress)]
+        public string Email { get; set; }
+    }
 }
