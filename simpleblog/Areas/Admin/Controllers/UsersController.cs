@@ -37,6 +37,9 @@ namespace simpleblog.Areas.Admin.Controllers
             if (Database.Session.Query<User>().Any(u => u.Username == form.Username))
                 ModelState.AddModelError("Username", "Username must be unique");
 
+            if (Database.Session.Query<User>().Any(e => e.Email == form.Email))
+                ModelState.AddModelError("Email", "Email must be unique");
+
             if (!ModelState.IsValid)
                 return View(form);
 
