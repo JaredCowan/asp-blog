@@ -9,39 +9,39 @@
       <title>@ViewBag.Title - Blog</title>
       @Styles.Render("~/styles")
   </head>
-  <body>
-      <header>
-          <h1>
-              <a href="@Url.RouteUrl("home")">Blog</a>
-          </h1>
+<body>
+  <header>
+    <h1>
+      <a href="@Url.RouteUrl("home")">Blog</a>
+    </h1>
 
-          @if (User.Identity.IsAuthenticated)
-          {
-              <p>Welcome back, @User.Identity.Name</p>
-              <a href="@Url.RouteUrl("logout")"> <i] class="glyphicon glyphicon-log-out"></i]> Logout</a>
+    @if (User.Identity.IsAuthenticated)
+    {
+      <p>Welcome back, @User.Identity.Name</p>
+      <a href="@Url.RouteUrl("logout")"> <i] class="glyphicon glyphicon-log-out"></i]> Logout</a>
 
-              if (User.IsInRole("admin"))
-              {
-                    <a href="@Url.Action("index", "Posts", new{area="admin"})">Admin Panel</a>
-              }
-          }
-          else
-          {
-              <p>
-                  <a href="@Url.RouteUrl("login")">Login</a>
-              </p>
-          }
+      if (User.IsInRole("admin"))
+      {
+        <a href="@Url.Action("index", "Posts", new{area="admin"})">Admin Panel</a>
+      }
+    }
+    else
+    {
+      <p>
+        <a href="@Url.RouteUrl("login")">Login</a>
+      </p>
+    }
 
-  
-      </header>
 
-      @RenderBody()
+  </header>
 
-      <footer>
-          &copy; @DateTime.UtcNow.Year - Me
-      </footer>
+  @RenderBody()
 
-      @Scripts.Render("~/scripts")
-      @RenderSection("Scripts", false)
+  <footer>
+    &copy; @DateTime.UtcNow.Year - Me
+  </footer>
+
+    @Scripts.Render("~/scripts")
+    @RenderSection("Scripts", false)
   </body>
 </html>
