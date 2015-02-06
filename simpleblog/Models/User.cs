@@ -13,6 +13,11 @@ namespace simpleblog.Models
         public virtual string Username { get; set; }
         public virtual string Email { get; set; }
         public virtual string PasswordHash { get; set; }
+
+        public virtual void SetPassword(string password)
+        {
+            
+        }
     }
 
     public class UserMap : ClassMapping<User>
