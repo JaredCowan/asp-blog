@@ -10,12 +10,15 @@ namespace simpleblog.Infrastructure
     {
         public void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            throw new NotImplementedException();
+            Database.Session.BeginTransaction();
         }
 
         public void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            throw new NotImplementedException();
+            if (filterContext.Exception == null)
+                Database.Session.Transaction.Commit();
+            else
+                Database.Session.Transaction.Rollback();
         }
     }
 }
