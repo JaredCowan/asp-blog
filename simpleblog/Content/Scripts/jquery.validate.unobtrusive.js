@@ -57,7 +57,7 @@
             replaceAttrValue = container.attr("data-valmsg-replace"),
             replace = replaceAttrValue ? $.parseJSON(replaceAttrValue) !== false : null;
 
-        container.removeClass("field-validation-valid").addClass("field-validation-error");
+        container.removeClass("field-validation-valid").addClass("field-validation-error alert alert-danger");
         error.data("unobtrusiveContainer", container);
 
         if (replace) {
@@ -75,7 +75,7 @@
 
         if (list && list.length && validator.errorList.length) {
             list.empty();
-            container.addClass("validation-summary-errors").removeClass("validation-summary-valid");
+            container.addClass("validation-summary-errors alert alert-danger").removeClass("validation-summary-valid");
 
             $.each(validator.errorList, function () {
                 $("<li />").html(this.message).appendTo(list);
@@ -89,7 +89,7 @@
             replace = replaceAttrValue ? $.parseJSON(replaceAttrValue) : null;
 
         if (container) {
-            container.addClass("field-validation-valid").removeClass("field-validation-error");
+            container.addClass("field-validation-valid alert alert-danger").removeClass("field-validation-error");
             error.removeData("unobtrusiveContainer");
 
             if (replace) {
@@ -113,10 +113,10 @@
         }
 
         $form.find(".validation-summary-errors")
-            .addClass("validation-summary-valid")
+            .addClass("validation-summary-errors alert alert-danger")
             .removeClass("validation-summary-errors");
         $form.find(".field-validation-error")
-            .addClass("field-validation-valid")
+            .addClass("field-validation-valid alert alert-danger")
             .removeClass("field-validation-error")
             .removeData("unobtrusiveContainer")
             .find(">*")  // If we were using valmsg-replace, get the underlying error

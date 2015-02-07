@@ -115,9 +115,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Scripts\Forms.js" />
     <Content Include="Content\Styles\bootstrap.css" />
-    <Content Include="Content\Styles\Admin.css" />
-    <Content Include="Content\Styles\Site.css" />
+    <Content Include="Content\Styles\Admin.css">
+      <DependentUpon>Admin.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\Site.css">
+      <DependentUpon>Site.scss</DependentUpon>
+    </Content>
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
@@ -133,11 +138,14 @@
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Users\New.cshtml" />
     <Content Include="Areas\Admin\Views\Users\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\ResetPassword.cshtml" />
     <None Include="Content\Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Content\Scripts\jquery-2.1.3.js" />
     <None Include="Content\Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Content\Scripts\jquery.validate.js" />
     <Content Include="Content\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Posts\Index.cshtml" />
     <Content Include="Views\Auth\Login.cshtml" />
@@ -174,6 +182,15 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Content\Styles\Admin.scss">
+      <Compile>True</Compile>
+      <Minify>True</Minify>
+      <IgnoreWarnings>True</IgnoreWarnings>
+      <IgnoreErrors>True</IgnoreErrors>
+      <CompileStyle>Nested</CompileStyle>
+      <DebugInfo>False</DebugInfo>
+    </Content>
+    <Content Include="Content\Styles\Site.scss" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

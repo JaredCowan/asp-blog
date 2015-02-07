@@ -32,4 +32,12 @@ namespace simpleblog.Areas.Admin.ViewModels
         [Required, MaxLength(255), DataType(DataType.EmailAddress)]
         public string Email { get; set; }
     }
+
+    public class UsersResetPassword
+    {
+        public string Username { get; set; }
+
+        [Required, DataType(DataType.Password)]
+        public string Password { get; set; }
+    }
 }

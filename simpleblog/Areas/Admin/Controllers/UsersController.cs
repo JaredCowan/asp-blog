@@ -89,5 +89,48 @@ namespace simpleblog.Areas.Admin.Controllers
 
             return RedirectToAction("index");
         }
+
+        public ActionResult ResetPassword(int id)
+        {
+            var user = Database.Session.Load<User>(id);
+            if (user == null)
+                return HttpNotFound();
+
+            return View(new UsersResetPassword
+            {
+                Username = user.Username
+            });
+        }
+
+        [HttpPost]
+        public ActionResult ResetPassword(int id, UsersResetPassword form)
+        {
+            var user = Database.Session.Load<User>(id);
+            if (user == null)
+                return HttpNotFound();
+
+            form.Username = user.Username;
+
+            if (!ModelState.IsValid)
+                return View(form);
+
+            user.SetPassword(form.Password);
+            Database.Session.Flush();
+            Database.Session.Update(user);
+
+            return RedirectToAction("index");
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var user = Database.Session.Load<User>(id);
+            if (user == null)
+                return HttpNotFound();
+
+            Database.Session.Flush();
+            Database.Session.Delete(user);
+            return RedirectToAction("index");
+        }
     }
 }

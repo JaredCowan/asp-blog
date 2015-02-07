@@ -1,0 +1,27 @@
+$default: #f00;
+$success: rgba(0, 240, 0, .1);
+$error: #f2dede;
+
+.validation-summary-errors {
+    position: relative;
+
+    li {
+        list-style-type: decimal;
+        margin-left: 5px;
+
+        &:before {
+            position: absolute;
+            left: 5px;
+            content: "Error ";
+        }
+    }
+}
+
+.form-group .valid {
+  background-color: $success;
+}
+
+.input-validation-error,
+*[aria-describedby$="-error"] {
+  background-color: $error;
+}

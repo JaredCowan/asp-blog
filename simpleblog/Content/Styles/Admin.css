@@ -1,1 +1,18 @@
-﻿
+.validation-summary-errors {
+  position: relative; }
+  .validation-summary-errors li {
+    list-style-type: decimal;
+    margin-left: 5px; }
+    .validation-summary-errors li:before {
+      position: absolute;
+      left: 5px;
+      content: "Error "; }
+
+.form-group .valid {
+  background-color: rgba(0, 240, 0, 0.1); }
+
+.input-validation-error,
+*[aria-describedby$="-error"] {
+  background-color: #f2dede; }
+
+/*# sourceMappingURL=Admin.css.map */
