@@ -1,4 +1,7 @@
-﻿$(".validation-summary-errors").addClass("alert alert-danger");
+﻿//$(".validation-summary-valid").hide();
+$(".validation-summary-errors").addClass("alert alert-danger")
+//$(".validation-summary-errors").show();
+//$(".validation-summary-errors").fadeIn("slow");
 $(function () {
   
     $("a[data-post]").click(function(e) {

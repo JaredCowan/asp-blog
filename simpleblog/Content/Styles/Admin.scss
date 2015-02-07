@@ -1,20 +1,54 @@
-$default: #f00;
-$success: rgba(0, 240, 0, .1);
-$error: #f2dede;
+@import 'Sassy/GlobImport';
+
+:root, body {
+  background-color: $light-gray;
+}
+
+.header {
+  font-size: 3.5em;
+}
+.users-header {
+  @extend .header;
+  text-shadow: 0 0 2px $medium-gray;
+  text-transform: uppercase;
+}
+.btn-toolbar {
+  margin: 0;
+  padding: 5px;
+  border: 1px solid #000;
+  border-bottom-color: lighten($base-gray, 70%);
+  box-shadow: 1px -1px 13px 0px $medium-gray;
+
+  + .table {
+    border: 1px solid #000;
+    border-top: none;
+    box-shadow: 1px 3px 13px 0px $medium-gray;
+  }
+}
+
+.validation-summary-valid {
+  left: -2000px;
+}
 
 .validation-summary-errors {
-    position: relative;
+  left: -2000px;
+}
 
-    li {
-        list-style-type: decimal;
-        margin-left: 5px;
+.validation-summary-errors {
+  position: relative;
+  @include transition(all, .9s, ease-in);
+  left: 0;
 
-        &:before {
-            position: absolute;
-            left: 5px;
-            content: "Error ";
-        }
+  li {
+    list-style-type: decimal;
+    margin-left: 5px;
+
+    &:before {
+      position: absolute;
+      left: 5px;
+      content: "Error ";
     }
+  }
 }
 
 .form-group .valid {

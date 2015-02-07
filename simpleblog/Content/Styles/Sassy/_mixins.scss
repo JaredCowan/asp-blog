@@ -1,0 +1,23 @@
+@mixin border-radius($number) {
+  $radius: $number + px;
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin border-radius-all($first, $second, $third, $fourth) {
+    $top:   $first   + px;
+    $right:  $second + px;
+    $bottom: $third  + px;
+    $left:   $fourth + px;
+  -webkit-border-radius: $top $right $bottom $left;
+     -moz-border-radius: $top $right $bottom $left;
+          border-radius: $top $right $bottom $left;
+}
+
+@mixin transition($all, $sec, $in) {
+    -webkit-transition: $all $sec $in;
+       -moz-transition: $all $sec $in;
+         -o-transition: $all $sec $in;
+            transition: $all $sec $in;
+}

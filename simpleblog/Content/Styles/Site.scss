@@ -1,3 +1,5 @@
+@import 'Sassy/GlobImport';
+
 body {
-    background-color: #ffd700;
+    background-color: $light-gray;
 }
