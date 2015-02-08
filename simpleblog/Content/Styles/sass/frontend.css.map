@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAIA,IAAK;EACD,gBAAgB,ECFN,OAAwB",
-"sources": ["frontend.scss","_variables.scss"],
-"names": [],
-"file": "frontend.css"
-}

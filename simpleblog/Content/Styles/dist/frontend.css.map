@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,IAAK;EACD,gBAAgB,ECFN,OAAwB;ECFpC,qBAAqB,EFKK,GAAG;EEJ1B,kBAAkB,EFIK,GAAG;EEHrB,aAAa,EFGK,GAAG",
+"sources": ["../sass/frontend.scss","../sass/_variables.scss","../sass/mixins/_border-radius.scss"],
+"names": [],
+"file": "frontend.css"
+}
