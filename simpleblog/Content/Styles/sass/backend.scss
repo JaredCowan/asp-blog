@@ -1,4 +1,6 @@
-@import 'Sassy/GlobImport';
+@import 'variables';
+@import 'mixins/border-radius';
+@import 'mixins/transition';
 
 :root, body {
   background-color: $light-gray;

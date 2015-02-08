@@ -11,12 +11,12 @@ namespace simpleblog.App_Start
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new StyleBundle("~/admin/styles")
-                .Include("~/content/styles/bootstrap.css")
-                .Include("~/content/styles/admin.css"));
+                .Include("~/content/styles/depend/bootstrap.css")
+                .Include("~/content/styles/dist/backend.css"));
 
             bundles.Add(new StyleBundle("~/styles")
-                .Include("~/content/styles/bootstrap.css")
-                .Include("~/content/styles/site.css"));
+                .Include("~/content/styles/depend/bootstrap.css")
+                .Include("~/content/styles/dist/frontend.css"));
 
             bundles.Add(new ScriptBundle("~/scripts")
                 .Include("~/content/scripts/jquery-2.1.3.js")
