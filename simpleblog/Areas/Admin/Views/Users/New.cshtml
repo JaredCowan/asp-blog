@@ -19,8 +19,10 @@
 
   <div class="form-group">
     @Html.LabelFor(f => f.Password)
-    @Html.TextBoxFor(f => f.Password, new { @class = "form-control", type = "password" })
+    @Html.TextBoxFor(f => f.Password, new {@class = "form-control", type = "password"})
   </div>
+
+  @Html.Partial("_RoleEditor", Model.Roles)
   
   <input type="submit" value="Create User" class="btn btn-success"/>
   <a href="@Url.Action("index")" class="pull-right btn btn-warning">Cancel</a>

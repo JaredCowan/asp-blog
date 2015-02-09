@@ -16,7 +16,9 @@
     @Html.LabelFor(f => f.Email)
     @Html.TextBoxFor(f => f.Email, new {@class = "form-control", type = "email"})
   </div>
-  
+
+  @Html.Partial("_RoleEditor", Model.Roles)
+
   <input type="submit" value="Update User" class="btn btn-warning"/>
   <a href="@Url.Action("index")" class="pull-right btn btn-info">Cancel</a>
 }
