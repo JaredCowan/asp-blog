@@ -45,9 +45,60 @@
   </div>
 </div>
 
-<ul>
-  @foreach (var item in Model.Posts)
-  {
-    <li>@item.Title</li>
-  }
-</ul>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Tags</th>
+    <th>Date</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+    @foreach (var post in Model.Posts)
+    {
+      var PostIsDeleted = "";
+      if (post.IsDeleted)
+       {
+         PostIsDeleted = "danger";
+       }
+      
+      <tr class="@PostIsDeleted">
+        <td>@post.Title</td>
+        <td>@post.User.Username</td>
+        <td>@string.Join(", ", post.Tags.Select(t => t.Name))</td>
+        <td>@post.CreatedAt</td>
+        <td>
+          <a href="@Url.Action("edit", new {post.Id})" class="btn btn-xs btn-primary">
+            <i class="glyphicon glyphicon-edit"></i> Edit
+          </a>
+
+          @if (!post.IsDeleted)
+          {
+            <div class="btn-group btn-group-xs">
+              <a href="javascript:;" class="btn btn-danger">
+                <i class="glyphicon glyphicon-trash"></i> Trash
+              </a>
+
+              <a href="javascript:;" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="javascript:;">
+                    <i class="glyphicon glyphicon-remove"></i> Delete
+                  </a>
+                </li>
+              </ul>
+            </div>
+          }
+          else
+          {
+            <a href="javascript:;" class="btn btn-xs btn-success">
+              <i class="glyphicon glyphicon-plus-sign"></i> Restore
+            </a>
+          }
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
