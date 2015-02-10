@@ -199,9 +199,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\PagedData.cs" />
     <Compile Include="Infrastructure\RoleProvider.cs" />
     <Compile Include="Infrastructure\SelectedTabAttribute.cs" />
     <Compile Include="Infrastructure\TransactionFilter.cs" />
+    <Compile Include="Migrations\_003_AddContentToPosts.cs" />
     <Compile Include="Migrations\_001_UsersAndRoles.cs" />
     <Compile Include="Migrations\_002_PostAndTags.cs" />
     <Compile Include="Models\Post.cs" />
