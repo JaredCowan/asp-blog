@@ -14,7 +14,7 @@ namespace simpleblog.Areas.Admin.Controllers
     [SelectedTab("posts")]
     public class PostsController : Controller
     {
-        private const int PostPerPage = 5;
+        private const int PostsPerPage = 5;
 
         public ActionResult Index(int page = 1)
         {
@@ -22,13 +22,13 @@ namespace simpleblog.Areas.Admin.Controllers
 
             var currentPostPage = Database.Session.Query<Post>()
                 .OrderByDescending(c => c.CreatedAt)
-                .Skip((page - 1) * PostPerPage)
-                .Take(PostPerPage)
+                .Skip((page - 1) * PostsPerPage)
+                .Take(PostsPerPage)
                 .ToList();
 
             return View(new PostsIndex
             {
-                Posts = new PagedData<Post>(currentPostPage, totalPostCount, page, PostPerPage)
+                Posts = new PagedData<Post>(currentPostPage, totalPostCount, page, PostsPerPage)
             });
         }
     }

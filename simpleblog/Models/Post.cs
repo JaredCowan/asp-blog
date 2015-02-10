@@ -30,7 +30,7 @@ namespace simpleblog.Models
     {
         public PostMap()
         {
-            Table("Post");
+            Table("posts");
 
             Id(x => x.Id, x => x.Generator(Generators.Identity));
 
@@ -50,8 +50,8 @@ namespace simpleblog.Models
                 x.NotNullable(true);
             });
 
-            Property(x => x.UpdatedAt, x => x.NotNullable(true));
-            Property(x => x.DeletedAt, x => x.NotNullable(true));
+            Property(x => x.UpdatedAt, x => x.Column("updated_at"));
+            Property(x => x.DeletedAt, x => x.Column("deleted_at"));
 
             Bag(x => x.Tags, x =>
             {
