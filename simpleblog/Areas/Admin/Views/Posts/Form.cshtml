@@ -1,0 +1,47 @@
+﻿@model simpleblog.Areas.Admin.ViewModels.PostsForm
+         
+<h1>@(Model.IsNew ? "Create Post" : "Update Post")</h1>
+
+@using (Html.BeginForm("Form", "Posts"))
+{
+  if (!Model.IsNew)
+  {
+    @Html.HiddenFor(f => f.PostId)
+  }
+  
+  @Html.AntiForgeryToken()
+
+  <div class="row">
+    <div class="col-lg-8">
+      @Html.ValidationSummary()
+
+      <div class="form-group">
+        @Html.LabelFor(f => f.Title)
+        @Html.TextBoxFor(f => f.Title, new { @class = "form-control" })
+      </div> <!-- End form-group -->
+
+      <div class="form-group">
+        @Html.LabelFor(f => f.Slug)
+        @Html.TextBoxFor(f => f.Slug, new { @class = "form-control" })
+      </div> <!-- End form-group -->
+
+      <div class="form-group">
+        @Html.LabelFor(f => f.Content)
+        @Html.TextAreaFor(f => f.Content, new { @class = "form-control" })
+      </div> <!-- End form-group -->
+
+    </div> <!-- End col-lg-8 -->
+
+    <div class="col-lg-4">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          Post Actions
+        </div> <!-- End panel-heading -->
+        <div class="panel-body">
+          <input type="submit" value="@(Model.IsNew ? "Publish Post" : "Update Post")" class="btn btn-sm btn-success" />
+          <a href="@Url.Action("index")" class="btn btn-danger btn-sm"> Cancel</a>
+        </div> <!-- End panel-body -->
+      </div> <!-- End panel -->
+    </div> <!-- End col-lg-4 -->
+  </div> <!-- End row -->
+}
