@@ -129,7 +129,7 @@ namespace simpleblog.Areas.Admin.Controllers
                 return HttpNotFound();
 
             post.DeletedAt = null;
-            // Database.Session.Flush();
+            Database.Session.Flush();
             Database.Session.Update(post);
 
             return RedirectToAction("index");
