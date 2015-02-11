@@ -492,6 +492,8 @@
     <Content Include="Tools\DeployDb-Dev.bat" />
     <Content Include="Views\Posts\_Posts.cshtml" />
     <Content Include="Views\Posts\_Post.cshtml" />
+    <Content Include="Views\Posts\Show.cshtml" />
+    <Content Include="Views\Posts\Tag.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
