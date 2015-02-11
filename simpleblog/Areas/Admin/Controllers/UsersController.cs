@@ -141,8 +141,8 @@ namespace simpleblog.Areas.Admin.Controllers
             if (user == null)
                 return HttpNotFound();
 
-            Database.Session.Flush();
             Database.Session.Delete(user);
+            Database.Session.Flush();
             return RedirectToAction("index");
         }
 

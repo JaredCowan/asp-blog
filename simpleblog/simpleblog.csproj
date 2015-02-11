@@ -146,6 +146,7 @@
   <ItemGroup>
     <Content Include="Content\CSS-Lint-Report\csslint.txt" />
     <Content Include="Content\Scripts\Forms.js" />
+    <Content Include="Content\Scripts\jquery-1.11.2.js" />
     <Content Include="Content\Styles\depend\bootstrap.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Styles\dist\backend.css" />

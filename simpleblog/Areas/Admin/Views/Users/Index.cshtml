@@ -35,7 +35,7 @@
             <a href="@Url.Action("ResetPassword", new{user.Id})" class="btn btn-xs btn-warning">
               <i class="glyphicon glyphicon-lock"></i> Reset Password
             </a>
-            <a href="@Url.Action("delete", new{user.Id})" class="btn btn-xs btn-danger" data-post="Are you sure you want to delete this @user.Username?">
+            <a href="@Url.Action("delete", new{user.Id})" class="btn btn-xs btn-danger" data-post="Are you sure you want to delete the user: @user.Username?">
               <i class="glyphicon glyphicon-remove"></i> Delete User
             </a>
           </div>

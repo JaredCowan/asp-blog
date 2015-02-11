@@ -94,5 +94,43 @@ namespace simpleblog.Areas.Admin.Controllers
             return RedirectToAction("index");
 
         } // End HttpPost Form
+
+        [HttpPost, ValidateAntiForgeryToken]
+        public ActionResult Trash(int id)
+        {
+            var post = Database.Session.Load<Post>(id);
+            if (post == null)
+                return HttpNotFound();
+
+            post.DeletedAt = DateTime.UtcNow;
+            Database.Session.Flush();
+            Database.Session.Update(post);
+            return RedirectToAction("index");
+        } // End Trash
+
+        [HttpPost, ValidateAntiForgeryToken]
+        public ActionResult Delete(int id)
+        {
+            var post = Database.Session.Load<Post>(id);
+            if (post == null)
+                return HttpNotFound();
+
+            Database.Session.Delete(post);
+            Database.Session.Flush();
+            return RedirectToAction("index");
+        } // End Delete
+
+        [HttpPost, ValidateAntiForgeryToken]
+        public ActionResult Restore(int id)
+        {
+            var post = Database.Session.Load<Post>(id);
+            if (post == null)
+                return HttpNotFound();
+
+            post.DeletedAt = null;
+            // Database.Session.Flush();
+            Database.Session.Update(post);
+            return RedirectToAction("index");
+        } // End Restore
     } // End PostsController
 } // End NameSpace
