@@ -4,23 +4,4 @@
     ViewBag.Title = "Posts";
 }
 
-@foreach (var post in Model.Posts)
-{
-  <article>
-    <h1><a href="@Url.RouteUrl("Post", new{post.Id, post.Slug})">@post.Title</a></h1>
-    <div>
-      @Html.Raw(post.Content)
-    </div>
-    <footer>
-      <ul class="pull-right list-unstyled tags">
-        @foreach (var tag in post.Tags)
-        {
-          <li>
-            <a href="@Url.RouteUrl("Tag", new {tag.Id, tag.Slug})" class="badge">@tag.Name</a>
-          </li>
-        }
-      </ul>
-      Posted: @post.CreatedAt.ToLocalTime().ToString("MM-dd-yy h:mm tt")
-    </footer>
-  </article>
-}
+@Html.Partial("_Posts", Model.Posts)

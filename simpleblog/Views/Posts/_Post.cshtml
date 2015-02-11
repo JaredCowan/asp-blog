@@ -1,0 +1,19 @@
+﻿@model simpleblog.Models.Post
+
+<article>
+  <h1><a href="@Url.RouteUrl("Post", new{Model.Id, Model.Slug})">@Model.Title</a></h1>
+  <div class="Model-content">
+    @Html.Raw(Model.Content)
+  </div>
+  <footer class="Model-footer">
+    <ul class="pull-right list-unstyled tags">
+      @foreach (var tag in Model.Tags)
+      {
+        <li>
+          <a href="@Url.RouteUrl("Tag", new {tag.Id, tag.Slug})" class="badge">@tag.Name</a>
+        </li>
+      }
+    </ul>
+    Posted: @Model.CreatedAt.ToLocalTime().ToString("MM-dd-yy h:mm tt")
+  </footer>
+</article>

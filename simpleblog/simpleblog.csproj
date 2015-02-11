@@ -490,6 +490,8 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Content Include="Tools\DeployDb-Dev.bat" />
+    <Content Include="Views\Posts\_Posts.cshtml" />
+    <Content Include="Views\Posts\_Post.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

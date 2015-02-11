@@ -13,3 +13,13 @@ body {
   background-color: #dedede;
   border-radius: 5px;
 }
+
+.post-content {
+  display: inline-block;
+  width: 50%;
+}
+
+.post-footer {
+  display: inline-block;
+  width: 40%;
+}
