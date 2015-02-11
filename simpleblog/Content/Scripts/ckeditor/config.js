@@ -1,8 +1,8 @@
 CKEDITOR.editorConfig = function (config) {
 	config.language = 'en';
 	config.uiColor = '#000000';
- 
-	config.toolbar = [
+
+    config.toolbar = [
         { name: 'document', groups: ['mode', 'document', 'doctools'], items: ['Source', '-', 'Preview', 'Print', '-', 'Templates'] },
         { name: 'clipboard', groups: ['clipboard', 'undo'], items: ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'] },
         { name: 'editing', groups: ['find', 'selection', 'spellchecker'], items: ['Find', 'Replace', '-', 'SelectAll', '-', 'Scayt'] },
@@ -17,8 +17,7 @@ CKEDITOR.editorConfig = function (config) {
         { name: 'colors', items: ['TextColor', 'BGColor'] },
         { name: 'tools', items: ['Maximize', 'ShowBlocks'] },
         { name: 'others', items: ['-'] },
-	];
-
+    ];
 	config.toolbarGroups = [
         { name: 'document', groups: ['mode', 'document', 'doctools'] },
         { name: 'clipboard', groups: ['clipboard', 'undo'] },
