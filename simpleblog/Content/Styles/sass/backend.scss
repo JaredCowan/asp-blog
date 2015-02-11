@@ -9,6 +9,7 @@
 .header {
   font-size: 3.5em;
 }
+
 .users-header {
   @extend .header;
   text-shadow: 0 0 2px $medium-gray;
@@ -21,7 +22,7 @@
   border: 1px solid #000;
   border-bottom-color: lighten($base-gray, 70%);
   box-shadow: 1px -1px 13px 0px $medium-gray;
- 
+
   + .table {
     border: 1px solid #000;
     border-top: none;
@@ -62,4 +63,42 @@
 .input-validation-error,
 *[aria-describedby$="-error"] {
   background-color: $error;
+}
+
+.post-tag-editor {
+
+  .tag-select {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+
+    .template {
+      display: none;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px dashed $light-gray;
+    }
+
+    a {
+      display: block;
+      padding: 2px 5px;
+      border-left: 20px solid lighten($medium-gray, 15%);
+
+      &:hover {
+        background: $light-gray;
+      }
+
+      &, &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .selected a {
+      background: #d9edf7;
+      border-left-color: #3a87ad;
+    }
+  }
 }

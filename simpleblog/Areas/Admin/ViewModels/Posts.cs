@@ -8,6 +8,13 @@ using simpleblog.Models;
 
 namespace simpleblog.Areas.Admin.ViewModels
 {
+    public class TagCheckbox
+    {
+        public int? Id { get; set; }
+        public string Name { get; set; }
+        public bool IsChecked { get; set; }
+    }
+
     public class PostsIndex
     {
         public PagedData<Post> Posts { get; set; } 
@@ -26,6 +33,8 @@ namespace simpleblog.Areas.Admin.ViewModels
 
         [Required, DataType(DataType.MultilineText)]
         public string Content { get; set; }
+
+        public IList<TagCheckbox> Tags { get; set; }
 
     } // End PostsForm
 } // End NameSpace

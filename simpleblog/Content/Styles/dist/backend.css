@@ -6,7 +6,7 @@
  * THIS IS AN AUTO GENERATED FILE * 
  * ALL CHANGES WILL BE ERASED * 
  * PLEASE MAKE EDITS IN -- CONTENT/STYLES/SASS/** -- * 
- * Changed: 02-08-2015 * 
+ * Changed: 02-10-2015 * 
 */ 
 
 :root,
@@ -72,4 +72,34 @@ body {
 .input-validation-error,
 *[aria-describedby$="-error"] {
   background-color: #f2dede;
+}
+
+.post-tag-editor .tag-select {
+  padding: 0;
+  margin: 10px 0;
+  list-style-type: none;
+}
+.post-tag-editor .tag-select .template {
+  display: none;
+}
+.post-tag-editor .tag-select li {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px dashed #dedede;
+}
+.post-tag-editor .tag-select a {
+  display: block;
+  padding: 2px 5px;
+  border-left: 20px solid #999;
+}
+.post-tag-editor .tag-select a:hover {
+  background: #dedede;
+}
+.post-tag-editor .tag-select a,
+.post-tag-editor .tag-select a:hover {
+  text-decoration: none;
+}
+.post-tag-editor .tag-select .selected a {
+  background: #d9edf7;
+  border-left-color: #3a87ad;
 }

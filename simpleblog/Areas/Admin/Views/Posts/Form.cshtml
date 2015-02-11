@@ -35,10 +35,47 @@
     <div class="col-lg-4">
       <div class="panel panel-info">
         <div class="panel-heading">
+          Tags
+        </div>
+        <div class="panel panel-body post-tag-editor">
+          <label for="new-tag-name">New Tag:</label>
+          <div class="input-group">
+            <input id="new-tag-name" type="text" class="new-tag-name form-control"/>
+            <span class="input-group-btn">
+              <button class="btn btn-primary add-tag-button" disabled>Add</button>
+            </span>
+          </div>
+
+          <ul class="tag-select">
+            <li class="template">
+              <a href="javascript:;" class="name"></a>
+
+              <input type="hidden" class="name-input"/>
+              <input type="hidden" class="selected-input" />
+            </li>
+            
+            @for (var i = 0; i < Model.Tags.Count; i++)
+            {
+              var tag = Model.Tags[i];
+
+              <li data-tag-id="@tag.Id" class="@(tag.IsChecked ? "selected" : "")">
+                <a href="javascript:;">@tag.Name</a>
+
+                <input type="hidden" name="Tags[@(i)].Id" value="@tag.Id"/>
+                <input type="hidden" name="Tags[@(i)].Name" value="@tag.Name"/>
+                <input type="hidden" name="Tags[@(i)].IsChecked" value="@tag.IsChecked.ToString()" class="selected-input"/>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+      
+      <div class="panel panel-success">
+        <div class="panel-heading">
           Post Actions
         </div> <!-- End panel-heading -->
         <div class="panel-body">
-          <input type="submit" value="@(Model.IsNew ? "Publish Post" : "Update Post")" class="btn btn-sm btn-success submit-post" />
+          <input type="submit" value="@(Model.IsNew ? "Publish Post" : "Update Post")" class="btn btn-sm btn-success submit-post"/>
           <a href="@Url.Action("index")" class="btn btn-danger btn-sm"> Cancel</a>
         </div> <!-- End panel-body -->
       </div> <!-- End panel -->
