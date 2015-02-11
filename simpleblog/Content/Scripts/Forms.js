@@ -21,4 +21,30 @@ $(function () {
             .appendTo(document.body)
             .submit();
     });
+    
+    $("[data-slug]").each(function() {
+        var $this         = $(this)
+          , $sendSlugFrom = $($this.data("slug"))
+          , $slug         = $("#Slug");
+
+        $this.attr("disabled", "");
+        $this.after("<a href='javascript:;' class='btn btn-warning enableSlug'>Double-Click to enable input.</a>");
+
+        $(".enableSlug").on("dblclick", function() {
+            $slug.prop("disabled", false);
+            $(".enableSlug").remove();
+        });
+
+        $sendSlugFrom.keyup(function() {
+            var slug = $sendSlugFrom.val();
+            slug = slug.replace(/[^a-z0-9\s]/gi, "");
+            slug = slug.toLowerCase();
+            slug = slug.replace(/\s+/g, "-");
+
+            if (slug.charAt(slug.length - 1) == "-")
+                slug = slug.substr(0, slug.length - 1);
+
+            $this.val(slug);
+        });
+    });
 });

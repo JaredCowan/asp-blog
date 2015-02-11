@@ -92,7 +92,6 @@ namespace simpleblog.Areas.Admin.Controllers
             Database.Session.SaveOrUpdate(post);
 
             return RedirectToAction("index");
-
         } // End HttpPost Form
 
         [HttpPost, ValidateAntiForgeryToken]
@@ -105,6 +104,7 @@ namespace simpleblog.Areas.Admin.Controllers
             post.DeletedAt = DateTime.UtcNow;
             Database.Session.Flush();
             Database.Session.Update(post);
+
             return RedirectToAction("index");
         } // End Trash
 
@@ -117,6 +117,7 @@ namespace simpleblog.Areas.Admin.Controllers
 
             Database.Session.Delete(post);
             Database.Session.Flush();
+
             return RedirectToAction("index");
         } // End Delete
 
@@ -130,6 +131,7 @@ namespace simpleblog.Areas.Admin.Controllers
             post.DeletedAt = null;
             // Database.Session.Flush();
             Database.Session.Update(post);
+
             return RedirectToAction("index");
         } // End Restore
     } // End PostsController
