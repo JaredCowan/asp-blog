@@ -68,7 +68,7 @@
         <td>@post.Title</td>
         <td>@post.User.Username</td>
         <td>@string.Join(", ", post.Tags.Select(t => t.Name))</td>
-        <td>@post.CreatedAt</td>
+        <td>@post.CreatedAt.ToLocalTime().ToString("MM-dd-yy h:mm tt")</td>
         <td>
           <a href="@Url.Action("edit", new {post.Id})" class="btn btn-xs btn-info">
             <i class="glyphicon glyphicon-edit"></i> Edit

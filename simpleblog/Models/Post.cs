@@ -18,7 +18,7 @@ namespace simpleblog.Models
         public virtual string Content { get; set; }
 
         public virtual DateTime CreatedAt { get; set; }
-        public virtual DateTime? UpdatedAt { get; set; }
+        public virtual DateTime UpdatedAt { get; set; }
         public virtual DateTime? DeletedAt { get; set; }
 
         public virtual IList<Tag> Tags { get; set; }
