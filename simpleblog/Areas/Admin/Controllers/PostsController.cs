@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using NHibernate.Linq;
 using simpleblog.Areas.Admin.ViewModels;
 using simpleblog.Infrastructure;
+using simpleblog.Infrastructure.Extensions;
 using simpleblog.Models;
 
 namespace simpleblog.Areas.Admin.Controllers
@@ -67,7 +68,7 @@ namespace simpleblog.Areas.Admin.Controllers
                     IsChecked = post.Tags.Contains(tag)
                 }).ToList()
             });
-        }
+        } // End Edit
 
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Form(PostsForm form)
@@ -77,6 +78,8 @@ namespace simpleblog.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(form);
 
+            var selectedTags = ReconcileTags(form.Tags).ToList();
+
             Post post;
             if (form.IsNew)
             {
@@ -85,6 +88,9 @@ namespace simpleblog.Areas.Admin.Controllers
                     CreatedAt = DateTime.UtcNow,
                     User = Auth.User
                 };
+
+                foreach (var tag in selectedTags)
+                    post.Tags.Add(tag);
             }
             else
             {
@@ -94,14 +100,20 @@ namespace simpleblog.Areas.Admin.Controllers
                     return HttpNotFound();
 
                 post.UpdatedAt = DateTime.UtcNow;
+
+                foreach (var toAdd in selectedTags.Where(t => !post.Tags.Contains(t)))
+                    post.Tags.Add(toAdd);
+
+                foreach (var toRemove in post.Tags.Where(t => !selectedTags.Contains(t)).ToList())
+                    post.Tags.Remove(toRemove);
             }
 
             post.Title = form.Title;
             post.Slug = form.Slug;
             post.Content = form.Content;
 
-            Database.Session.Flush();
             Database.Session.SaveOrUpdate(post);
+            Database.Session.Flush();
 
             return RedirectToAction("index");
         } // End HttpPost Form
@@ -146,5 +158,35 @@ namespace simpleblog.Areas.Admin.Controllers
 
             return RedirectToAction("index");
         } // End Restore
+
+        private IEnumerable<Tag> ReconcileTags(IEnumerable<TagCheckbox> tags)
+        {
+            foreach (var tag in tags.Where(t => t.IsChecked))
+            {
+                if (tag.Id == null)
+                {
+                    yield return Database.Session.Load<Tag>(tag.Id);
+                    continue;
+                }
+
+                var existingTag = Database.Session.Query<Tag>().FirstOrDefault(t => t.Name == tag.Name);
+                if (existingTag != null)
+                {
+                    yield return existingTag;
+                    continue;
+                }
+
+                var newTag = new Tag
+                {
+                    Name = tag.Name,
+                    Slug = tag.Name.Slugify()
+                };
+
+                Database.Session.Save(newTag);
+                Database.Session.Flush();
+
+                yield return newTag;
+            } // End foreach
+        } // End ReconcileTags
     } // End PostsController
 } // End NameSpace

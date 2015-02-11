@@ -21,7 +21,12 @@ namespace simpleblog.Models
         public virtual DateTime? UpdatedAt { get; set; }
         public virtual DateTime? DeletedAt { get; set; }
 
-        public virtual IList<Tag> Tags { get; set; } 
+        public virtual IList<Tag> Tags { get; set; }
+
+        public Post()
+        {
+            Tags = new List<Tag>();
+        }
 
         public virtual bool IsDeleted{get { return DeletedAt != null; }}
     }

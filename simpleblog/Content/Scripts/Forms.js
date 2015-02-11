@@ -70,9 +70,27 @@ $(function () {
     var $addTagButton = $tagEditor.find(".add-tag-button")
       , $newTagName = $tagEditor.find(".new-tag-name");
 
+    function addTag(name) {
+        var newIndex = $tagEditor.find(".tag-select > li").size() - 1;
+
+        $tagEditor
+            .find(".tag-select > li.template")
+            .clone()
+            .removeClass("template")
+            .addClass("selected")
+            .append('<input type="hidden" name="Tags[' + newIndex + '].Id" value="' + newIndex + '">')
+            .find(".name").text(name).end()
+            .find(".name-input").val(name).attr("name", "Tags[" + newIndex + "].Name").end()
+            .find(".selected-input").attr("name", "Tags[" + newIndex + "].IsChecked").val(true).end()
+            .appendTo($tagEditor.find(".tag-select"));
+
+        $newTagName.val("");
+        $addTagButton.prop("disabled", true);
+    }
+
     $addTagButton.click(function(e) {
         e.preventDefault();
-        addTag($newTagName.valueOf());
+        addTag($newTagName.val());
     });
 
     $newTagName
@@ -90,23 +108,6 @@ $(function () {
             if ($newTagName.val().length > 0)
                 addTag($newTagName.val());
         });
-
-    function addTag(name) {
-        var newIndex = $tagEditor.find(".tag-select > li").size() - 1;
-
-        $tagEditor
-            .find(".tag-select > li.template")
-            .clone()
-            .removeClass("template")
-            .addClass("selected")
-            .find(".name").text(name).end()
-            .find(".name-input").val(name).attr("name", "Tags[" + newIndex + "].Name").end()
-            .find(".selected-input").attr("name", "Tags[" + newIndex + "].IsChecked").val(true).end()
-            .appendTo($tagEditor.find(".tag-select"));
-
-        $newTagName.val("");
-        $addTagButton.prop("disabled", true);
-    }
 
     // End move to new file
 
