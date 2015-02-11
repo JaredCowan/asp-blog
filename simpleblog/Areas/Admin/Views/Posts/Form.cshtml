@@ -17,12 +17,12 @@
 
       <div class="form-group">
         @Html.LabelFor(f => f.Title)
-        @Html.TextBoxFor(f => f.Title, new { @class = "form-control" })
+        @Html.TextBoxFor(f => f.Title, new { @class = "form-control no-autocomplete", autofocus="true" })
       </div> <!-- End form-group -->
 
       <div class="form-group">
         @Html.LabelFor(f => f.Slug)
-        @Html.TextBoxFor(f => f.Slug, new { @class = "form-control", data_slug = "#Title" })
+        @Html.TextBoxFor(f => f.Slug, new { @class = "form-control no-autocomplete", data_slug = "#Title" })
       </div> <!-- End form-group -->
 
       <div class="form-group">
@@ -38,7 +38,7 @@
           Post Actions
         </div> <!-- End panel-heading -->
         <div class="panel-body">
-          <input type="submit" value="@(Model.IsNew ? "Publish Post" : "Update Post")" class="btn btn-sm btn-success" />
+          <input type="submit" value="@(Model.IsNew ? "Publish Post" : "Update Post")" class="btn btn-sm btn-success submit-post" />
           <a href="@Url.Action("index")" class="btn btn-danger btn-sm"> Cancel</a>
         </div> <!-- End panel-body -->
       </div> <!-- End panel -->

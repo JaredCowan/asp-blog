@@ -1,10 +1,14 @@
 ﻿$(".validation-summary-errors").addClass("alert alert-danger");
 
 $(function () {
-  
+
+    $(".submit-post").click(function() {
+        $("#Slug").prop("disabled", false);
+    });
+
     $("a[data-post]").click(function(e) {
         e.preventDefault();
-
+        
         var $this = $(this)
            , message = $this.data("post");
 
@@ -47,4 +51,9 @@ $(function () {
             $this.val(slug);
         });
     });
+
+});
+
+$(window).load(function() {
+    $(".no-autocomplete").attr("autocomplete", "off");
 });

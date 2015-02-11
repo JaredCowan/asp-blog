@@ -22,6 +22,8 @@ namespace simpleblog.Areas.Admin.ViewModels
     public class UsersNew
     {
         public IList<RoleCheckbox> Roles { get; set; }
+
+        [Required, MaxLength(128)]
         public string Username { get; set; }
         
         [Required, DataType(DataType.Password)]
