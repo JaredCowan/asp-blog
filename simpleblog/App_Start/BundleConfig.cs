@@ -24,6 +24,9 @@ namespace simpleblog.App_Start
                 .Include("~/content/scripts/jquery.validate.unobtrusive.js")
                 .Include("~/content/scripts/bootstrap.js"));
 
+            bundles.Add(new ScriptBundle("~/admin/post/scripts")
+                .Include("~/Content/scripts/AdminPosts.js"));
+
             // Scripts need to be in Content folder or there's a permission error.
             bundles.Add(new ScriptBundle("~/admin/scripts")
                 .Include("~/content/scripts/jquery-1.11.2.js")

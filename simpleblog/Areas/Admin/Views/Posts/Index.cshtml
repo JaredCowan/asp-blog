@@ -77,7 +77,7 @@
           @if (!post.IsDeleted)
           {
             <div class="btn-group btn-group-xs">
-              <a href="@Url.Action("trash", new{post.Id})" class="btn btn-warning" data-post="Are you sure you want to soft delete this post? You can restore it later.">
+              <a href="@Url.Action("trash", new{post.Id})" class="btn btn-warning" data-post="Are you sure you want to soft delete this post? This will only make the post hidden from public view. You can restore this post later.">
                 <i class="glyphicon glyphicon-trash"></i> Soft Delete
               </a>
 
@@ -89,7 +89,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="@Url.Action("trash", new{post.Id})" data-post="Are you sure you want to soft delete this post? You can restore it later.">
+                  <a href="@Url.Action("trash", new{post.Id})" data-post="Are you sure you want to soft delete this post? This will only make the post hidden from public view. You can restore this post later.">
                     <i class="glyphicon glyphicon-trash"></i> Soft Delete
                   </a>
                 </li>
@@ -98,8 +98,8 @@
           }
           else
           {
-            <a href="@Url.Action("restore", new{post.Id})" class="btn btn-xs btn-success" data-post="">
-              <i class="glyphicon glyphicon-plus-sign"></i> Restore
+            <a href="@Url.Action("restore", new{post.Id})" class="btn btn-xs btn-success" data-post="Are you sure you want to restore this post? This will make the post public again.">
+              <i class="glyphicon glyphicon-plus-sign"></i> Restore Post
             </a>
           }
         </td>
