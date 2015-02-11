@@ -1,6 +1,6 @@
 
 Verde Circle CSS Files 
-Task Completed On: 02-10-2015 
+Task Completed On: 02-11-2015 
 Task Version Tested: v1.0.0 
 Browsers Supported: Android 2.3,Android >= 4,Chrome >= 20,ChromeAndroid >= 39,Firefox >= 24,FirefoxAndroid >= 33,Explorer >= 8,ExplorerMobile >= 10,iOS >= 6,Opera >= 12,Safari >= 6 
 
@@ -9,4 +9,14 @@ Browsers Supported: Android 2.3,Android >= 4,Chrome >= 20,ChromeAndroid >= 39,Fi
 
 csslint: No errors in Content/Styles/dist/frontend.css.
 
-csslint: No errors in Content/Styles/dist/backend.css.
+csslint: There are 2 problems in Content/Styles/dist/backend.css.
+
+backend.css
+1: warning at line 96, col 1
+Don't use IDs in selectors.
+#content-textarea {
+
+backend.css
+2: warning at line 123, col 1
+Don't use IDs in selectors.
+#content-textarea {

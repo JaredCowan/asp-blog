@@ -1,8 +1,9 @@
-@import 'variables';
-@import 'mixins/border-radius';
-@import 'mixins/transition';
+@import "variables";
+@import "mixins/border-radius";
+@import "mixins/transition";
 
 body {
-    background-color: $light-gray;
-    @include  border-radius(5px);
+  background-color: $light-gray;
+
+  @include  border-radius(5px);
 }

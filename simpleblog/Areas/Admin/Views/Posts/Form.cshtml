@@ -26,7 +26,11 @@
         @Html.TextBoxFor(f => f.Slug, new { @class = "form-control no-autocomplete", data_slug = "#Title" })
       </div> <!-- End form-group -->
 
-      <div class="form-group">
+      <div class="alert alert-warning loading-textarea">
+        <i class="glyphicon glyphicon-cog spin"></i> Loading..
+      </div>
+
+      <div class="form-group" id="content-textarea">
         @Html.LabelFor(f => f.Content)
         @Html.TextAreaFor(f => f.Content, new { @class = "form-control"})
       </div> <!-- End form-group -->

@@ -129,6 +129,12 @@
                 cwd: 'Content/Styles/dist/',
                 src: ['*.css', '!*.min.css', '!*.css.map'],
                 dest: 'Content/Styles/dist/'
+            },
+            sass: {
+                expand: true,
+                cwd: 'Content/Styles/sass/',
+                src: ['*.scss', '**/**.scss'],
+                dest: 'Content/Styles/sass/'
             }
         },
 

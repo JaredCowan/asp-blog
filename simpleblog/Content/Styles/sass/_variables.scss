@@ -1,7 +1,7 @@
-$base-gray:   #000;
-$dark-gray:   lighten($base-gray, 20%); // #333333;
+$base-gray: #000;
+$dark-gray: lighten($base-gray, 20%); // #333333;
 $medium-gray: lighten($base-gray, 45%); // #737373
-$light-gray:  lighten($base-gray, 87%); // #DEDEDE
+$light-gray: lighten($base-gray, 87%); // #DEDEDE
 
 $default: #f00;
 $success: rgba(0,240,0,.1);

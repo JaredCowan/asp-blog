@@ -1,8 +1,9 @@
-@import 'variables';
-@import 'mixins/border-radius';
-@import 'mixins/transition';
+@import "variables";
+@import "mixins/border-radius";
+@import "mixins/transition";
 
-:root, body {
+:root,
+body {
   background-color: $light-gray;
 }
 
@@ -11,22 +12,23 @@
 }
 
 .users-header {
-  @extend .header;
   text-shadow: 0 0 2px $medium-gray;
   text-transform: uppercase;
+
+  @extend .header;
 }
 
 .btn-toolbar {
-  margin: 0;
   padding: 5px;
+  margin: 0;
   border: 1px solid #000;
   border-bottom-color: lighten($base-gray, 70%);
-  box-shadow: 1px -1px 13px 0px $medium-gray;
+  box-shadow: 1px -1px 13px 0 $medium-gray;
 
   + .table {
     border: 1px solid #000;
     border-top: none;
-    box-shadow: 1px 3px 13px 0px $medium-gray;
+    box-shadow: 1px 3px 13px 0 $medium-gray;
   }
 }
 
@@ -40,12 +42,13 @@
 
 .validation-summary-errors {
   position: relative;
-  @include transition(all, .9s, ease-in);
   left: 0;
 
+  @include transition(all, .9s, ease-in);
+
   li {
-    list-style-type: decimal;
     margin-left: 5px;
+    list-style-type: decimal;
 
     &:before {
       position: absolute;
@@ -66,19 +69,18 @@
 }
 
 .post-tag-editor {
-
   .tag-select {
-    list-style-type: none;
     padding: 0;
     margin: 10px 0;
+    list-style-type: none;
 
     .template {
       display: none;
     }
 
     li {
-      margin: 0;
       padding: 0;
+      margin: 0;
       border-bottom: 1px dashed $light-gray;
     }
 
@@ -91,7 +93,8 @@
         background: $light-gray;
       }
 
-      &, &:hover {
+      &,
+      &:hover {
         text-decoration: none;
       }
     }
@@ -100,5 +103,52 @@
       background: #d9edf7;
       border-left-color: #3a87ad;
     }
+  }
+}
+
+#content-textarea {
+  opacity: 0;
+}
+
+.loading-textarea {
+  position: absolute;
+  top: 300px;
+  right: 0;
+  left: 0;
+  z-index: 3000;
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.hide-loading {
+  @include transition(all, 2s, ease-in);
+}
+
+.loading-hidden {
+  @include transition(all, 1s, ease-in);
+}
+
+#content-textarea {
+  opacity: 1;
+}
+
+.hide-loading {
+  display: none;
+  opacity: 0;
+}
+.spin {
+  animation-name: rotateThis;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotateThis {
+  from {
+    transform: scale( 1 ) rotate( 0deg );
+  }
+  to {
+    transform: scale( 1 ) rotate( 360deg );
   }
 }

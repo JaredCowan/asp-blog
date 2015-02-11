@@ -6,7 +6,7 @@
  * THIS IS AN AUTO GENERATED FILE * 
  * ALL CHANGES WILL BE ERASED * 
  * PLEASE MAKE EDITS IN -- CONTENT/STYLES/SASS/** -- * 
- * Changed: 02-10-2015 * 
+ * Changed: 02-11-2015 * 
 */ 
 
 :root,
@@ -102,4 +102,90 @@ body {
 .post-tag-editor .tag-select .selected a {
   background: #d9edf7;
   border-left-color: #3a87ad;
+}
+
+#content-textarea {
+  opacity: 0;
+}
+
+.loading-textarea {
+  position: absolute;
+  top: 300px;
+  right: 0;
+  left: 0;
+  z-index: 3000;
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.hide-loading {
+  -webkit-transition: all 2s ease-in;
+       -o-transition: all 2s ease-in;
+          transition: all 2s ease-in;
+}
+
+.loading-hidden {
+  -webkit-transition: all 1s ease-in;
+       -o-transition: all 1s ease-in;
+          transition: all 1s ease-in;
+}
+
+#content-textarea {
+  opacity: 1;
+}
+
+.hide-loading {
+  display: none;
+  opacity: 0;
+}
+
+.spin {
+  -webkit-animation-name: rotateThis;
+       -o-animation-name: rotateThis;
+          animation-name: rotateThis;
+  -webkit-animation-duration: 2s;
+       -o-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+       -o-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+       -o-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes rotateThis {
+  from {
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+  }
+  to {
+    -webkit-transform: scale(1) rotate(360deg);
+            transform: scale(1) rotate(360deg);
+  }
+}
+
+@-o-keyframes rotateThis {
+  from {
+    -o-transform: scale(1) rotate(0deg);
+       transform: scale(1) rotate(0deg);
+  }
+  to {
+    -o-transform: scale(1) rotate(360deg);
+       transform: scale(1) rotate(360deg);
+  }
+}
+
+@keyframes rotateThis {
+  from {
+    -webkit-transform: scale(1) rotate(0deg);
+         -o-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+  }
+  to {
+    -webkit-transform: scale(1) rotate(360deg);
+         -o-transform: scale(1) rotate(360deg);
+            transform: scale(1) rotate(360deg);
+  }
 }
