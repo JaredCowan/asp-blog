@@ -57,6 +57,7 @@ namespace simpleblog.Areas.Admin.Controllers
             user.SetPassword(form.Password);
 
             Database.Session.Save(user);
+            Database.Session.Flush();
 
             return RedirectToAction("index");
         }
