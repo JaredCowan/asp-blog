@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -39,5 +40,59 @@ namespace simpleblog.Areas.Admin.Controllers
                 IsNew = true
             });
         } // End New
+
+        public ActionResult Edit(int id)
+        {
+            var post = Database.Session.Load<Post>(id);
+            if (post == null)
+                return HttpNotFound();
+
+            return View("Form", new PostsForm
+            {
+                IsNew = false,
+                PostId = id,
+                Content = post.Content,
+                Slug = post.Slug,
+                Title = post.Title
+            });
+        }
+
+        [HttpPost, ValidateAntiForgeryToken]
+        public ActionResult Form(PostsForm form)
+        {
+            form.IsNew = form.PostId == null;
+
+            if (!ModelState.IsValid)
+                return View(form);
+
+            Post post;
+            if (form.IsNew)
+            {
+                post = new Post
+                {
+                    CreatedAt = DateTime.UtcNow,
+                    User = Auth.User
+                };
+            }
+            else
+            {
+                post = Database.Session.Load<Post>(form.PostId);
+
+                if (post == null)
+                    return HttpNotFound();
+
+                post.UpdatedAt = DateTime.UtcNow;
+            }
+
+            post.Title = form.Title;
+            post.Slug = form.Slug;
+            post.Content = form.Content;
+
+            Database.Session.Flush();
+            Database.Session.SaveOrUpdate(post);
+
+            return RedirectToAction("index");
+
+        } // End HttpPost Form
     } // End PostsController
 } // End NameSpace
