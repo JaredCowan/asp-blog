@@ -58,7 +58,7 @@
                     linebreak: true
                 },
                 files: {
-                    src: ['Content/CSS-Lint-Report/csslint.txt']
+                    src: ['Content/CSS-Lint-Report/csslint<%= grunt.template.date(\"mm-dd-yyyy\") %>.txt']
                 }
             }
         },
@@ -119,7 +119,7 @@
             ]
         },
 
-        // Reformat CSS to code conventions
+        // Reformat CSS to code conventions listed in ~/Content/Styles/config
         csscomb: {
             options: {
                 config: 'Content/Styles/config/csscomb.json'
@@ -147,7 +147,7 @@
         }
     });
 
-    // Load plugins
+    // Load all grunt plugins listed in ~/package.json
     require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
 
     // CSS Lint
@@ -156,8 +156,8 @@
     // CSS Comb
     grunt.registerTask('comb', ['csscomb']);
 
-    // Default Task.
-    grunt.registerTask('default', ['clean', 'compass', 'autoprefixer', 'csscomb']);
+    // Default Task
+    grunt.registerTask('default', ['clean', 'compass', 'autoprefixer', 'csscomb', 'lint', 'usebanner']);
 
     // Full Distribution Task.
     grunt.registerTask('dist', ['clean', 'compass', 'autoprefixer', 'csscomb', 'lint', 'usebanner']);

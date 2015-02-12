@@ -6,55 +6,71 @@
 
 @if (Model.IsLoggedIn && Model.IsAdmin)
 {
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      Welcome back, @Model.Username!
-    </div>
-    <div class="panel-body">
-      <div class="btn-group btn-group-sm">
-        <a href="@Url.Action("Index", "posts", new {area = "admin"})" class="btn btn-default">Post</a>
-        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li>
-            <a href="@Url.Action("New", "posts", new{area = "admin"})">Create Post</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-}
-
-<div class="panel panel-success">
-  <div class="panel-heading">About Me</div>
-  <div class="panel-body">
-    I'm a person and I do things.
-  </div>
-</div>
-
-@if (Model.Tags.Any())
-{
-  var maxPostsInTag = Model.Tags.Max(t => t.PostCount);
-
-  <div class="panel panel-info sidebar-tags">
-    <div class="panel-heading">
-      <div class="panel-body">
-        <div class="list-group">
-          @foreach (var tag in Model.Tags)
-          {
-            var percent = Math.Ceiling((float)tag.PostCount / maxPostsInTag * 100);
-
-            <a href="@Url.RouteUrl("Tag", new {tag.Id, tag.Slug})" class="list-group-item tag-row">
-              <span class="tag-name">@tag.Name</span>
-              <span class="badge">@tag.PostCount</span>
-              <span class="progress">
-                <span class="progress-bar progress-bar-info" style="width: @percent%"></span>
-              </span>
-            </a>
-          }
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          Welcome back, @Model.Username!
+        </div>
+        <div class="panel-body">
+          <div class="btn-group btn-group-sm">
+            <a href="@Url.Action("Index", "posts", new {area = "admin"})" class="btn btn-default">Post Admin</a>
+            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="@Url.Action("New", "posts", new {area = "admin"})">Create Post</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="col-sm-3">
+       @if (User.Identity.IsAuthenticated)
+    {
+      <p class="alert-info panel-heading">Welcome back, @User.Identity.Name</p>
+      <a href="@Url.RouteUrl("logout")" class="btn btn-warning"> <i class="glyphicon glyphicon-log-out"></i> Logout</a>
+
+      if (User.IsInRole("admin"))
+      {
+        <a href="@Url.Action("index", "Posts", new{area="admin"})" class="btn btn-success">Admin Panel</a>
+      }
+    }
+    else
+    {
+      <p>
+        <a href="@Url.RouteUrl("login")">Login</a>
+      </p>
+    }
+    </div>
+    <div class="col-sm-9">
+      @if (Model.Tags.Any())
+      {
+        var maxPostsInTag = Model.Tags.Max(t => t.PostCount);
+
+        <div class="panel panel-info sidebar-tags">
+          <div class="panel-heading">
+            <div class="panel-body">
+              <div class="list-group">
+                @foreach (var tag in Model.Tags)
+                {
+                  var percent = Math.Ceiling((float)tag.PostCount / maxPostsInTag * 100);
+
+                  <a href="@Url.RouteUrl("Tag", new {tag.Id, tag.Slug})" class="list-group-item tag-row">
+                    <span class="tag-name">@tag.Name</span>
+                    <span class="badge">@tag.PostCount</span>
+                    <span class="progress">
+                      <span class="progress-bar progress-bar-info" style="width: @percent%"></span>
+                    </span>
+                  </a>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      }
     </div>
   </div>
 }

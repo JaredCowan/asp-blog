@@ -26,22 +26,7 @@
       <a href="@Url.RouteUrl("home")">Blog</a>
     </h1>
 
-    @if (User.Identity.IsAuthenticated)
-    {
-      <p>Welcome back, @User.Identity.Name</p>
-      <a href="@Url.RouteUrl("logout")"> <i class="glyphicon glyphicon-log-out"></i> Logout</a>
-
-      if (User.IsInRole("admin"))
-      {
-        <a href="@Url.Action("index", "Posts", new{area="admin"})">Admin Panel</a>
-      }
-    }
-    else
-    {
-      <p>
-        <a href="@Url.RouteUrl("login")">Login</a>
-      </p>
-    }
+   
 
   </header>
 <div class="container-fluid">
