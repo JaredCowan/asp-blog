@@ -2,44 +2,78 @@
 
 $(function () {
 
-    $(".submit-post").click(function() {
+    $(".submit-post").click(function () {
         $("#Slug").prop("disabled", false);
     });
 
-    $("a[data-post]").click(function(e) {
-        e.preventDefault();
-        
-        var $this = $(this)
-           , message = $this.data("post");
+    function ajaxPostBtn() {
+        $("a[data-post]").on("click", function (e) {
+            e.preventDefault();
 
-        if (message && !confirm(message))
-            return;
+            var $this = $(this),
+                href = $this.attr("href"),
+                action = $this.attr("href").split("/").reverse()[1],
+                postId = $this.attr("href").split("/").reverse()[0],
+                path,
+                message = $this.data("post"),
+                newUrl = function () { if (action == "trash") { path = "restore"; } else if (action == "trash") { path = "trash"; } else { path = "delete"; } return "/Admin/Posts/" + path + "/" + postId; };
 
-         var antiForgeryToken = $("#anti-forgery-form input")
-           , antiForgeryInput = $("<input type='hidden'>").attr("name", antiForgeryToken.attr("name")).val(antiForgeryToken.val());
+            var antiForgeryToken = $("#anti-forgery-form input"), antiForgeryInput = $("<input type='hidden'>").attr("name", antiForgeryToken.attr("name")).val(antiForgeryToken.val());
 
-        $("<form>")
-           .attr("method", "post")
-           .attr("action", $this.attr("href"))
-            .append(antiForgeryInput)
-            .appendTo(document.body)
-            .submit();
-    });
-    
-    $("[data-slug]").each(function() {
-        var $this         = $(this)
-          , $sendSlugFrom = $($this.data("slug"))
-          , $slug         = $("#Slug");
+            function returnView(postInt) {
+                switch (action) {
+                    case "trash":
+                        $("#btnGroup" + postInt).hide();
+                        $("#btn" + postInt).show();
+                        $("#soft-delete" + postInt).toggleClass("danger");
+                        break;
+                    case "restore":
+                        $("#btnGroup" + postInt).show();
+                        $("#btn" + postInt).hide();
+                        $("#soft-delete" + postInt).removeClass("danger");
+                        break;
+                    case "delete":
+                        $("#soft-delete" + postInt).remove();
+                        break;
+                }
+            }
+
+            function submit() {
+                $.ajax({
+                    url: href,
+                    type: "POST",
+                    data: antiForgeryInput,
+                    success: returnView(postId)
+                });
+            }
+
+            if (action == "delete" && message && confirm(message)) {
+                submit();
+            }
+
+            if (action != "delete") {
+                submit();
+            }
+
+        });
+    }
+
+    ajaxPostBtn();
+
+    $("[data-slug]").each(function () {
+        var $this = $(this),
+            $sendSlugFrom = $($this.data("slug")),
+            $slug = $("#Slug");
 
         $this.attr("disabled", "");
         $this.after("<a href='javascript:;' class='btn btn-warning enableSlug'>Double-Click to enable input.</a>");
 
-        $(".enableSlug").on("dblclick", function() {
+        $(".enableSlug").on("dblclick", function () {
             $slug.prop("disabled", false);
             $(".enableSlug").remove();
         });
 
-        $sendSlugFrom.keyup(function() {
+        $sendSlugFrom.keyup(function () {
             var slug = $sendSlugFrom.val();
             slug = slug.replace(/[^a-z0-9\s]/gi, "");
             slug = slug.toLowerCase();
@@ -52,10 +86,11 @@ $(function () {
         });
     });
 
-    
+
+
 
 });
 
-$(window).load(function() {
+$(window).load(function () {
     $(".no-autocomplete").attr("autocomplete", "off");
 });

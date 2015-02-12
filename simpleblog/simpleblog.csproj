@@ -144,7 +144,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="404.html" />
     <Content Include="Content\CSS-Lint-Report\csslint.txt" />
     <Content Include="Content\Scripts\AdminPosts.js" />
     <Content Include="Content\Scripts\ckeditor\adapters\jquery.js" />

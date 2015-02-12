@@ -29,7 +29,7 @@ namespace simpleblog.App_Start
 
             // Scripts need to be in Content folder or there's a permission error.
             bundles.Add(new ScriptBundle("~/admin/scripts")
-                .Include("~/content/scripts/jquery-1.11.2.js")
+                .Include("~/content/scripts/jquery-2.1.3.js")
                 .Include("~/content/scripts/jquery.validate.js")
                 .Include("~/content/scripts/jquery.validate.unobtrusive.js")
                 .Include("~/content/scripts/bootstrap.js")
