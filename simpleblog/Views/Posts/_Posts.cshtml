@@ -1,24 +1,21 @@
 ﻿@model simpleblog.Infrastructure.PagedData<simpleblog.Models.Post>
 
-<div class="container-fluid">
-  @foreach (var post in Model)
-  {
-    @Html.Partial("_Post", post)
-  }
+@foreach (var post in Model)
+{
+  @Html.Partial("_Post", post)
+}
 
-  <div class="clearfix"></div>
-  <ul class="list-unstyled">
-    <li class="pull-left">
-      <a href="@(Model.HasPreviousPage ? @Url.Action(null, new {page = Model.PreviousPage}) : "javascript:;")" class="btn btn-primary @(!Model.HasPreviousPage ? "disabled" : "")">
-        <i class="glyphicon glyphicon-chevron-left"></i> Newer Posts
-      </a>
-    </li>
-
-    <li class="pull-right">
-      <a href="@(Model.HasNextPage ? @Url.Action(null, new {page = Model.NextPage}) : "javascript:;")" class="btn btn-primary @(!Model.HasNextPage ? "disabled" : "")">
-        Older Posts <i class="glyphicon glyphicon-chevron-right"></i>
-      </a>
-    </li>
-  </ul>
-</div>
+<div class="clearfix"></div>
+<ul class="list-unstyled">
+  <li class="pull-left">
+    <a href="@(Model.HasPreviousPage ? @Url.Action(null, new {page = Model.PreviousPage}) : "javascript:;")" class="btn btn-primary @(!Model.HasPreviousPage ? "disabled" : "")">
+      <i class="glyphicon glyphicon-chevron-left"></i> Newer Posts
+    </a>
+  </li>
+  <li class="pull-right">
+    <a href="@(Model.HasNextPage ? @Url.Action(null, new {page = Model.NextPage}) : "javascript:;")" class="btn btn-primary @(!Model.HasNextPage ? "disabled" : "")">
+      Older Posts <i class="glyphicon glyphicon-chevron-right"></i>
+    </a>
+  </li>
+</ul>
 <div class="clearfix"></div>

@@ -4,4 +4,6 @@
     ViewBag.Title = "Posts";
 }
 
+@Html.Action("Sidebar", "Layout")
+
 @Html.Partial("_Posts", Model.Posts)

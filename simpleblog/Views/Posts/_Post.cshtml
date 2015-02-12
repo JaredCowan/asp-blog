@@ -1,11 +1,14 @@
 ﻿@model simpleblog.Models.Post
 
-<article>
-  <h1><a href="@Url.RouteUrl("Post", new{Model.Id, Model.Slug})">@Model.Title</a></h1>
-  <div class="Model-content">
-    @Html.Raw(Model.Content)
+
+<div class="row">
+  <div class="col-sm-4">
+    <h1><a href="@Url.RouteUrl("Post", new{Model.Id, Model.Slug})">@Model.Title</a></h1>
+    <div class="Model-content">
+      @Html.Raw(Model.Content)
+    </div>
   </div>
-  <footer class="Model-footer">
+  <div class="col-sm-4">
     <ul class="pull-right list-unstyled tags">
       @foreach (var tag in Model.Tags)
       {
@@ -15,5 +18,5 @@
       }
     </ul>
     Posted: @Model.CreatedAt.ToLocalTime().ToString("MM-dd-yy h:mm tt")
-  </footer>
-</article>
+  </div>
+</div>

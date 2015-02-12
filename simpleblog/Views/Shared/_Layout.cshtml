@@ -1,14 +1,25 @@
 ﻿@using System.Web.Optimization
 @{
-    Layout = null;
+  Layout = null;
 }
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta name="viewport" content="width=device-width" />
-      <title>@ViewBag.Title - Blog</title>
-      @Styles.Render("~/styles")
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=true" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="content-language" content="en">
+  <meta name="description" content="Blog For Verde Circle. Verde Circle is at the forefront of changing the way small businesses operate and manage inventory, locations, orders and accounting">
+  <meta name="keywords" content="verde circle, thriii, accounting, inventory management, small business, order management, warehouse management">
+  <meta name="author" content="Verde Circle, Jared Lucas Cowan">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://az721473.vo.msecnd.net/cdn/verde-circle-logo.jpg">
+  <meta property="og:site_name" content="Verde Circle Blog">
+  <title>@ViewBag.Title - Blog</title>
+  @Styles.Render("~/styles")
+</head>
 <body>
   <header>
     <h1>
@@ -32,16 +43,17 @@
       </p>
     }
 
-
   </header>
-
+<div class="container-fluid">
+  
   @RenderBody()
 
-  <footer>
-    &copy; @DateTime.UtcNow.Year - Me
-  </footer>
 
-    @Scripts.Render("~/scripts")
-    @RenderSection("Scripts", false)
-  </body>
+  <footer>
+    &copy; @DateTime.UtcNow.Year - Verde Circle
+  </footer>
+</div>
+  @Scripts.Render("~/scripts")
+  @RenderSection("Scripts", false)
+</body>
 </html>

@@ -23,3 +23,29 @@ body {
   display: inline-block;
   width: 40%;
 }
+
+.sidebar-tags .tag-name,
+.sidebar-tags .badge {
+  position: relative;
+  z-index: 5;
+}
+.sidebar-tags .progress {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  height: 100%;
+  padding: 6px;
+  margin: 0;
+  background-color: transparent;
+}
+.sidebar-tags .progress-bar {
+  display: block;
+  background: #ddd;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
