@@ -2,6 +2,8 @@
 
 $(function () {
 
+    $("#post-form-replace a").attr("disabled", false);
+
     $(".submit-post").click(function () {
         $("#Slug").prop("disabled", false);
     });

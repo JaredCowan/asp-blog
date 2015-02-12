@@ -76,11 +76,11 @@
 
   
           <div class="btn-group btn-group-xs" id="btnGroup@(post.Id)" style="@(post.IsDeleted ? "display: none;" : "")">
-            <a href="@Url.Action("trash", new{post.Id})" id="tester" class="btn btn-warning" data-post="Are you sure you want to soft delete this post? This will only make the post hidden from public view. You can restore this post later.">
+            <a href="@Url.Action("trash", new{post.Id})" id="tester" class="btn btn-warning" data-post="Are you sure you want to soft delete this post? This will only make the post hidden from public view. You can restore this post later." disabled="disabled">
               <i class="glyphicon glyphicon-trash"></i> Soft Delete
             </a>
 
-            <a href="javascript:;" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+            <a href="javascript:;" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" disabled="disabled"><span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li>
                 <a href="@Url.Action("delete", new {post.Id})" data-post="Are you sure you wanted to permently delete this post?">

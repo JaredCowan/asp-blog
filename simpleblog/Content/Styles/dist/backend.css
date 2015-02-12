@@ -6,7 +6,7 @@
  * THIS IS AN AUTO GENERATED FILE * 
  * ALL CHANGES WILL BE ERASED * 
  * PLEASE MAKE EDITS IN -- CONTENT/STYLES/SASS/** -- * 
- * Changed: 02-11-2015 * 
+ * Changed: 02-12-2015 * 
 */ 
 
 :root,
@@ -102,6 +102,10 @@ body {
 .post-tag-editor .tag-select .selected a {
   background: #d9edf7;
   border-left-color: #3a87ad;
+}
+
+#Content {
+  height: 300px;
 }
 
 #content-textarea {
