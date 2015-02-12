@@ -407,6 +407,7 @@
     <Content Include="Content\Scripts\ckeditor\plugins\wsc\LICENSE.md" />
     <Content Include="Content\Scripts\ckeditor\plugins\wsc\README.md" />
     <Content Include="Content\Scripts\ckeditor\skins\moono\readme.md" />
+    <Content Include="ConnectionStrings.config" />
     <None Include="Content\Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Content\Scripts\jquery-2.1.3.js" />
     <None Include="Content\Scripts\jquery.validate-vsdoc.js" />

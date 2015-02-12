@@ -5,6 +5,7 @@
 *.suo
 *.user
 *.sln.docstates
+*/[Cc]onnection[Ss]trings.config
 
 # Build results
 [Dd]ebug/
