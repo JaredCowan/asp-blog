@@ -2,10 +2,10 @@
   "name": "JaredCowan",
   "upstreamUrl": "",
   "originUrl": "git@github.com:VerdeCircle/VerdeCircleFrontEnd.git",
-  "buildNumber": "0",
+  "buildNumber": "1",
   "commit": {
     "branch": "master",
-    "id": "0dcb5d0",
-    "message": "0dcb5d0 update to grunt file production phase 1"
+    "id": "aabb2aa",
+    "message": "aabb2aa update to grunt file production phase 1"
   }
 }
