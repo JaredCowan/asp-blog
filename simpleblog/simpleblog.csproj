@@ -144,7 +144,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\CSS-Lint-Report\csslint.txt" />
     <Content Include="Content\Scripts\AdminPosts.js" />
     <Content Include="Content\Scripts\ckeditor\adapters\jquery.js" />
     <Content Include="Content\Scripts\ckeditor\build-config.js" />
@@ -414,7 +413,9 @@
     <Content Include="Content\Scripts\jquery.validate.js" />
     <Content Include="Content\Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Gruntfile.js" />
+    <Content Include="Grunt\config.json" />
     <None Include="README.md" />
+    <Content Include="Grunt\test.js" />
     <Content Include="LICENSE.txt" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
@@ -510,6 +511,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\CSS-Lint-Report\" />
     <Folder Include="Content\Images\" />
     <Folder Include="Content\Styles\sass\admin\" />
     <Folder Include="Content\Styles\sass\extend\" />

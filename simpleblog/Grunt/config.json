@@ -1,0 +1,11 @@
+{
+  "name": "JaredCowan",
+  "upstreamUrl": "",
+  "originUrl": "git@github.com:VerdeCircle/VerdeCircleFrontEnd.git",
+  "buildNumber": "0",
+  "commit": {
+    "branch": "master",
+    "id": "98c500f",
+    "message": "98c500f updated gruntfile"
+  }
+}
