@@ -6,7 +6,7 @@
 body {
   color: #797979;
   font-family: 'Open Sans', sans-serif;
-  padding: 0px !important;
+  /*padding: 0px !important;*/
   margin: 70px 0 0 0 !important;
   font-size:13px;
 }
@@ -2107,7 +2107,7 @@ ul#filters > .active > span {
 }
 
 body {
-  margin-top: 0 !important;
+  /*margin-top: 0 !important;*/
   position: relative;
 }
 .btn-clear {
@@ -3182,7 +3182,7 @@ overflow: visible;
 /* Login Page */
 .login-body,
 #blog-page {
-  margin-top: 150px !important;
+  /*margin-top: 150px !important;*/
 }
 /* END Login Page */
 

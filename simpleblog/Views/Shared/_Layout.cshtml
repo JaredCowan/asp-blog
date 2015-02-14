@@ -28,39 +28,39 @@
   <meta name="author" content="Verde Circle, Jared Lucas Cowan">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="http://az721473.vo.msecnd.net/cdn/verde-circle-logo.jpg">
+  <meta property="og:image" content="@Url.VerdeCdn("~/images/verde-circle-logo.jpg")">
   <meta property="og:site_name" content="Verde Circle Blog">
-  <title>@ViewBag.Title - Blog</title>
+  <title>Verde Circle - Blog</title>
   @Styles.Render("~/styles")
 </head>
 <body>
-    <!--header start-->
-    <header class="header-frontend">
-      <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand" href="index.html">
-              <img src="@Url.VerdeCdn("~/images/thriii-logo.png")">
-            </a>
-          </div>
-          <div class="navbar-collapse collapse thriii-header-background">
-            <ul class="nav navbar-nav">
-              <li><a href="javascript:;">Home</a></li>
-              <li class="@SelectedTabClass("blog")"><a href="@Url.RouteUrl("Home")">Blog</a></li>
-              <li><a href="javascript:;">Price</a></li>
-              <li><a href="javascript:;">Contact</a></li>
-              <li><a href="javascript:;">Sign In</a></li>
-              <li><a href="javascript:;">Free Trial</a></li>
-            </ul>
-          </div>
+  <!--header start-->
+  <header class="header-frontend">
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img src="@Url.VerdeCdn("~/images/thriii-logo.png")">
+          </a>
+        </div>
+        <div class="navbar-collapse collapse thriii-header-background">
+          <ul class="nav navbar-nav">
+            <li><a href="javascript:;">Home</a></li>
+            <li class="@SelectedTabClass("blog")"><a href="@Url.RouteUrl("Home")">Blog</a></li>
+            <li><a href="javascript:;">Price</a></li>
+            <li><a href="javascript:;">Contact</a></li>
+            <li><a href="javascript:;">Sign In</a></li>
+            <li><a href="javascript:;">Free Trial</a></li>
+          </ul>
         </div>
       </div>
-    </header> <!--header end-->
- 
-  <div class="container-fluid">
+    </div>
+  </header> <!--header end-->
+
+  <div class="container">
 
     @RenderBody()
 
