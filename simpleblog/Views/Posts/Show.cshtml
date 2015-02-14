@@ -6,26 +6,6 @@
   ViewBag.Title = Model.Post.Title;
 }
 
-<div class="row">
-  <div class="col-sm-8">
-    <h1>@Model.Post.Title</h1>
-    <div class="Model-content">
-      @Html.Raw(Model.Post.Content)
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <ul class="pull-right list-unstyled tags">
-      @foreach (var tag in Model.Post.Tags)
-      {
-        <li>
-          <a href="@Url.RouteUrl("Tag", new {tag.Id, tag.Slug})" class="badge">@tag.Name</a>
-        </li>
-      }
-    </ul>
-    Posted: @Model.Post.CreatedAt.ToLocalTime().ToString("dddd, MMMM dd, yyyy, 'at' h:MM tt")
-  </div>
-</div>
-
 <div class="row" id="blog-page">
   <!--blog start-->
   <div class="col-lg-9">
