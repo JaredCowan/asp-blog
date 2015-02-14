@@ -15,17 +15,24 @@ namespace simpleblog.App_Start
                 .Include("~/content/styles/dist/backend.css"));
 
             bundles.Add(new StyleBundle("~/styles")
+                .Include("~/content/styles/depend/theme.css")
                 .Include("~/content/styles/depend/bootstrap.css")
+                .Include("~/content/styles/depend/font-awesome.css")
+                .Include("~/content/styles/depend/style.css")
+                .Include("~/content/styles/depend/style-responsive.css")
                 .Include("~/content/styles/dist/frontend.css"));
 
             bundles.Add(new ScriptBundle("~/scripts")
                 .Include("~/content/scripts/jquery-1.11.2.js")
                 .Include("~/content/scripts/jquery.validate.js")
                 .Include("~/content/scripts/jquery.validate.unobtrusive.js")
-                .Include("~/content/scripts/bootstrap.js"));
+                .Include("~/content/scripts/bootstrap.js")
+                .Include("~/content/scripts/jquery.scrollTo.min.js")
+                .Include("~/content/scripts/jquery.nicescroll.js")
+                .Include("~/content/scripts/common-scripts.js"));
 
             bundles.Add(new ScriptBundle("~/admin/post/scripts")
-                .Include("~/Content/scripts/AdminPosts.js"));
+                .Include("~/content/scripts/AdminPosts.js"));
 
             // Scripts need to be in Content folder or there's a permission error.
             bundles.Add(new ScriptBundle("~/admin/scripts")

@@ -1,0 +1,20 @@
+
+
+csslint: No errors in Content/Styles/dist/frontend.css.
+
+csslint: There are 3 problems in Content/Styles/dist/backend.css.
+
+backend.css
+1: warning at line 108, col 1
+Don't use IDs in selectors.
+#Content {
+
+backend.css
+2: warning at line 112, col 1
+Don't use IDs in selectors.
+#content-textarea {
+
+backend.css
+3: warning at line 139, col 1
+Don't use IDs in selectors.
+#content-textarea {

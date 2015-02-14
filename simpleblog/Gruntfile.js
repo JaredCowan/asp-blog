@@ -15,6 +15,7 @@
       , userInfo = path.join(base, 'Grunt/config.json')
       , customConfig = function () { }
       , configExist = grunt.file.exists(userInfo)
+      , tempFolder = "../.git/temp/"
       , build;
 
     // Create config file if not present. Creates an empty json object
@@ -31,10 +32,6 @@
             }
         }, null, 2));
     }
-
-    grunt.file.copy('../README.md', '../.git/temp/v1-README.md');
-    grunt.file.copy('./README.md', '../.git/temp/v2-README.md');
-    grunt.file.copy('./README.md', '../README.md');
 
     var repoConfig = grunt.file.readJSON(userInfo);
     var num = repoConfig.buildNumber;
@@ -308,6 +305,10 @@
         }
     });
 
+    grunt.file.copy('../README.md', tempFolder + 'v1-README.md');
+    grunt.file.copy('./README.md', tempFolder + 'v2-README.md');
+    grunt.file.copy('./README.md', '../README.md');
+
     // Load all grunt plugins listed in ~/package.json
     require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
 
@@ -318,9 +319,8 @@
     grunt.registerTask('comb', ['csscomb']);
 
     // Default Task
-    grunt.registerTask('default', ['clean', 'compass', 'autoprefixer', 'csscomb', 'lint', 'usebanner']);
+    grunt.registerTask('default', grunt.fail.warn("Default Grunt task not set. Please provide task name. \n"));
 
     // Full Distribution Task.
     grunt.registerTask('dist', ['shell', 'clean', 'compass', 'autoprefixer', 'csscomb', 'lint', 'usebanner']);
-
 };

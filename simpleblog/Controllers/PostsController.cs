@@ -11,6 +11,7 @@ using simpleblog.ViewModels;
 
 namespace simpleblog.Controllers
 {
+    [SelectedTab("blog")]
     public class PostsController : Controller
     {
         private const int PostPerPage = 10;

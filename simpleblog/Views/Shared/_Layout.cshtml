@@ -1,7 +1,20 @@
-﻿@using System.Web.Optimization
+﻿@using System.Configuration
+@using System.Reflection
+@using System.Web.Optimization
+@using Microsoft.WindowsAzure.Storage
+
 @{
   Layout = null;
 }
+
+@helper SelectedTabClass(string tabName)
+{
+  if (tabName == ViewBag.SelectedTab)
+  {
+    @: active
+  }
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,23 +34,41 @@
   @Styles.Render("~/styles")
 </head>
 <body>
-  <header>
-    <h1>
-      <a href="@Url.RouteUrl("home")">Blog</a>
-    </h1>
+    <!--header start-->
+    <header class="header-frontend">
+      <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="index.html">
+              <img src="@Url.VerdeCdn("~/images/thriii-logo.png")">
+            </a>
+          </div>
+          <div class="navbar-collapse collapse thriii-header-background">
+            <ul class="nav navbar-nav">
+              <li><a href="javascript:;">Home</a></li>
+              <li class="@SelectedTabClass("blog")"><a href="@Url.RouteUrl("Home")">Blog</a></li>
+              <li><a href="javascript:;">Price</a></li>
+              <li><a href="javascript:;">Contact</a></li>
+              <li><a href="javascript:;">Sign In</a></li>
+              <li><a href="javascript:;">Free Trial</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header> <!--header end-->
+ 
+  <div class="container-fluid">
 
-   
-
-  </header>
-<div class="container-fluid">
-  
-  @RenderBody()
+    @RenderBody()
 
 
-  <footer>
-    &copy; @DateTime.UtcNow.Year - Verde Circle
-  </footer>
-</div>
+    <footer>
+      &copy; @DateTime.UtcNow.Year - Verde Circle
+    </footer>
+  </div>
   @Scripts.Render("~/scripts")
   @RenderSection("Scripts", false)
 </body>
