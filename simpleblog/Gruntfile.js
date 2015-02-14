@@ -319,7 +319,7 @@
     grunt.registerTask('comb', ['csscomb']);
 
     // Default Task
-    grunt.registerTask('default', grunt.fail.warn("Default Grunt task not set. Please provide task name. \n"));
+    grunt.registerTask('default');
 
     // Full Distribution Task.
     grunt.registerTask('dist', ['shell', 'clean', 'compass', 'autoprefixer', 'csscomb', 'lint', 'usebanner']);

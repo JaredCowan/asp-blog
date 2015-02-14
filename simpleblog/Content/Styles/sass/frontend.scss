@@ -3,7 +3,7 @@
 @import "mixins/transition";
 
 body {
-  background-color: $light-gray;
+  background-color: #fff;
 
   @include border-radius(5px);
 }
@@ -53,3 +53,14 @@ body {
     @include border-radius(5px);
   }
 }
+
+.author,
+.blog-item h1 {
+  a {
+    text-transform: capitalize;
+  }
+}
+
+/*.author a {
+  text-transform: capitalize
+}*/

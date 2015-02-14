@@ -1,0 +1,38 @@
+Verde-Circle-Frontend | Verde Circle CSS Files | Build: 45
+
+ *** AUTO GENERATED FILE ***
+This file is generated automaticly on every build. 
+No info herin is manually entered.
+
+ *** AUTO GENERATED FILE *** 
+
+JaredCowan compiled this build on Saturday, February 14th, 2015, at 1:44:23 AM 
+The build was completed on the (master) branch.
+The commit mesagge and commit id(sha) at the time of build was ("a88896d updated settings on blog editor")
+You can view the code for this commit/build at www.github.com/VerdeCircle/VerdeCircleFrontEnd/commit/a88896d 
+Upstream Url:  
+Origin Url: git@github.com:VerdeCircle/VerdeCircleFrontEnd.git 
+Version: v1.0.0 
+Browsers Supported: Android 2.3,Android >= 4,Chrome >= 20,ChromeAndroid >= 39,Firefox >= 24,FirefoxAndroid >= 33,Explorer >= 8,ExplorerMobile >= 10,iOS >= 6,Opera >= 12,Safari >= 6 
+
+ *** AUTO GENERATED FILE ***
+
+
+csslint: No errors in Content/Styles/dist/frontend.css.
+
+csslint: There are 3 problems in Content/Styles/dist/backend.css.
+
+backend.css
+1: warning at line 96, col 1
+Don't use IDs in selectors.
+#Content {
+
+backend.css
+2: warning at line 100, col 1
+Don't use IDs in selectors.
+#content-textarea {
+
+backend.css
+3: warning at line 127, col 1
+Don't use IDs in selectors.
+#content-textarea {
