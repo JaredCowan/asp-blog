@@ -294,6 +294,15 @@
     <Content Include="Content\Scripts\ckeditor\plugins\magicline\images\icon-rtl.png" />
     <Content Include="Content\Scripts\ckeditor\plugins\magicline\images\icon.png" />
     <Content Include="Content\Scripts\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Content\Scripts\ckeditor\plugins\pbckcode\.gitignore" />
+    <Content Include="Content\Scripts\ckeditor\plugins\pbckcode\dialogs\pbckcode.js" />
+    <Content Include="Content\Scripts\ckeditor\plugins\pbckcode\dialogs\PBSyntaxHighlighter.js" />
+    <Content Include="Content\Scripts\ckeditor\plugins\pbckcode\dialogs\style.css" />
+    <Content Include="Content\Scripts\ckeditor\plugins\pbckcode\icons\pbckcode.png" />
+    <Content Include="Content\Scripts\ckeditor\plugins\pbckcode\lang\en.js" />
+    <Content Include="Content\Scripts\ckeditor\plugins\pbckcode\lang\fr.js" />
+    <Content Include="Content\Scripts\ckeditor\plugins\pbckcode\plugin.js" />
+    <Content Include="Content\Scripts\ckeditor\plugins\preview\preview.html" />
     <Content Include="Content\Scripts\ckeditor\plugins\scayt\dialogs\options.js" />
     <Content Include="Content\Scripts\ckeditor\plugins\scayt\dialogs\toolbar.css" />
     <Content Include="Content\Scripts\ckeditor\plugins\specialchar\dialogs\lang\af.js" />
@@ -419,6 +428,10 @@
     <Content Include="Content\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\Scripts\ckeditor\plugins\pbckcode\CHANGELOG.md" />
+    <Content Include="Content\Scripts\ckeditor\plugins\pbckcode\icons\pbckcode.psd" />
+    <Content Include="Content\Scripts\ckeditor\plugins\pbckcode\LICENSE" />
+    <Content Include="Content\Scripts\ckeditor\plugins\pbckcode\README.md" />
     <None Include="Content\Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Content\Scripts\jquery-2.1.3.js" />
     <None Include="Content\Scripts\jquery.validate-vsdoc.js" />

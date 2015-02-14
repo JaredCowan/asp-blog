@@ -58,7 +58,6 @@
 });
 
 $(window).load(function() {
-    console.log("Loaded!");
     $(".loading-textarea ").addClass("hide-loading");
     $("#content-textarea").addClass("loading-hidden").show();
 });
