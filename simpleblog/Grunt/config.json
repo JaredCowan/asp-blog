@@ -2,10 +2,10 @@
   "name": "JaredCowan",
   "upstreamUrl": "",
   "originUrl": "git@github.com:VerdeCircle/VerdeCircleFrontEnd.git",
-  "buildNumber": "46",
+  "buildNumber": "47",
   "commit": {
     "branch": "master",
-    "id": "a88896d",
-    "message": "a88896d updated settings on blog editor"
+    "id": "30cf364",
+    "message": "30cf364 git d basic updates on blog"
   }
 }

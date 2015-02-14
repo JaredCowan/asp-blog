@@ -1,5 +1,4 @@
-﻿@using System.Activities.Statements
-@model simpleblog.Areas.Admin.ViewModels.PostsIndex
+﻿@model simpleblog.Areas.Admin.ViewModels.PostsIndex
 
 <h1>Posts</h1>
 
@@ -32,7 +31,7 @@
       <a href="@Url.Action("Index", new {page = Model.Posts.NextPage})" class="btn btn-primary btn-sm">
         Next Page
         <i class="glyphicon glyphicon-chevron-right"></i>
-        
+
       </a>
     }
     else
@@ -45,25 +44,25 @@
   </div>
 </div>
 
-<table class="table table-striped">
+<table class="table table-striped table-hover">
   <thead>
-  <tr>
-    <th>Title</th>
-    <th>Author</th>
-    <th>Tags</th>
-    <th>Date</th>
-    <th>Actions</th>
-  </tr>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Tags</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
   </thead>
   <tbody>
     @foreach (var post in Model.Posts)
     {
       var PostIsDeleted = "";
       if (post.IsDeleted)
-       {
-         PostIsDeleted = "danger";
-       }
-      
+      {
+        PostIsDeleted = "danger";
+      }
+
       <tr id="soft-delete@(post.Id)" class="@PostIsDeleted">
         <td>@post.Title</td>
         <td>@post.User.Username</td>
@@ -74,7 +73,6 @@
             <i class="glyphicon glyphicon-edit"></i> Edit
           </a>
 
-  
           <div class="btn-group btn-group-xs" id="btnGroup@(post.Id)" style="@(post.IsDeleted ? "display: none;" : "")">
             <a href="@Url.Action("trash", new{post.Id})" id="tester" class="btn btn-warning" data-post="Are you sure you want to soft delete this post? This will only make the post hidden from public view. You can restore this post later." disabled="disabled">
               <i class="glyphicon glyphicon-trash"></i> Soft Delete
@@ -94,11 +92,11 @@
               </li>
             </ul>
           </div>
-       
+
           <a href="@Url.Action("restore", new{post.Id})" id="btn@(post.Id)" style="@(post.IsDeleted ? "" : "display: none;")" class="btn btn-xs btn-success" data-post="Are you sure you want to restore this post? This will make the post public again.">
             <i class="glyphicon glyphicon-plus-sign"></i> Restore Post
           </a>
-  
+
         </td>
       </tr>
     }

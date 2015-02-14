@@ -5,7 +5,7 @@
   font-family: 'FontAwesome';
   src: url('/content/fonts/fontawesome-webfont.eot?v=4.0.3');
   src: url('/content/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'),
-       url('/content/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'),
+       url('/content/fonts/fontawesome-webfont.woff?v=4.0.3') format('font/woff'),
        url('/content/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'),
        url('/content/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
   font-weight: normal;
@@ -561,7 +561,7 @@
 .fa-twitter-square:before {
   content: "\f081";
 }
-.fa-facebook-square:before {
+.fa-face-square:before {
   content: "\f082";
 }
 .fa-camera-retro:before {
@@ -628,10 +628,10 @@
 .fa-phone-square:before {
   content: "\f098";
 }
-.fa-twitter:before {
+.fa-twitt:before {
   content: "\f099";
 }
-.fa-facebook:before {
+.fa-face:before {
   content: "\f09a";
 }
 .fa-github:before {
@@ -801,7 +801,7 @@
 .fa-envelope:before {
   content: "\f0e0";
 }
-.fa-linkedin:before {
+.fa-linkin:before {
   content: "\f0e1";
 }
 .fa-rotate-left:before,

@@ -1,31 +1,5 @@
 ﻿@model simpleblog.Models.Post
 
-
-@*<div class="row">
-  <div class="col-sm-4">
-    <h1><a href="@Url.RouteUrl("Post", new {Model.Id, Model.Slug})">@Model.Title</a>
-    </h1>
-    <div class="Model-content">
-      @Html.Raw(Model.Content)
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <ul class="pull-right list-unstyled tags">
-      @foreach (var tag in Model.Tags)
-      {
-        <li>
-          <a href="@Url.RouteUrl("Tag", new {tag.Id, tag.Slug})" class="badge">@tag.Name</a>
-        </li>
-      }
-    </ul>
-    Posted: @Model.CreatedAt.ToLocalTime().ToString("dddd, MMMM dd, yyyy, 'at' h:MM tt")
-  </div>
-</div>*@
-
-
-
-
-
 <div class="blog-item">
   <div class="row">
     <div class="col-lg-2 col-sm-2">
@@ -48,7 +22,6 @@
           <img src="http://placehold.it/701x329&text=Blog+Image">
         </a>
       </div>
-
     </div>
   </div>
   <div class="row">

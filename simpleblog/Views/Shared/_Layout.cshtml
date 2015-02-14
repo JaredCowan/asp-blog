@@ -65,10 +65,41 @@
     @RenderBody()
 
 
-    <footer>
-      &copy; @DateTime.UtcNow.Year - Verde Circle
-    </footer>
-  </div>
+  </div> <!-- End Container -->
+
+  <footer class="footer thriii__footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-sm-3">
+          <h1>contact info</h1>
+          <address>
+            <p>Address: 123 10th Street<i class="fa fa-facebook"></i></p>
+            <p>
+              Venice Beach, CA, 90266
+            </p><p>Phone : (310) 123-1444</p>
+            <p>Fax : (310) 555-1313</p>
+            <p>Email : <a href="javascript:;">support@thriii.com</a></p>
+          </address>
+        </div>
+        <div class="col-lg-5 col-sm-5">
+          <h1>latest tweet</h1>
+          <div class="tweet-box">
+            <i class="fa fa-twitter"></i>
+            <em>Please follow <a href="javascript:;">thriii</a> for all future updates of us! <a href="javascript:;">twitter.com/thriii</a></em>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-3 col-lg-offset-1">
+          <h1>stay connected</h1>
+          <ul class="social-link-footer list-unstyled">
+            <li><a href="javascript:;"><i class="fa fa-face"></i></a></li>
+            <li><a href="javascript:;"><i class="fa fa-linkin"></i></a></li>
+            <li><a href="javascript:;"><i class="fa fa-twitt"></i></a></li>
+            <li><a href="javascript:;"><i class="fa fa-github"></i></a></li>
+          </ul>
+        </div>
+      </div> <!-- END Row -->
+    </div> <!-- End Container -->
+  </footer><!-- END thriii__footer -->
   @Scripts.Render("~/scripts")
   @RenderSection("Scripts", false)
 </body>
