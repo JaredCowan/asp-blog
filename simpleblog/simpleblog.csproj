@@ -542,9 +542,14 @@
     <Compile Include="Areas\Admin\ViewModels\Users.cs" />
     <Compile Include="Auth.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ErrorsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LayoutController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
+    <Compile Include="Controllers\PriceController.cs" />
+    <Compile Include="Controllers\SigninController.cs" />
+    <Compile Include="Controllers\SignupController.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -610,6 +615,11 @@
     <Content Include="Views\Layout\Sidebar.cshtml" />
     <Content Include="Views\Errors\NotFound.cshtml" />
     <Content Include="Views\Errors\Error.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Price\Index.cshtml" />
+    <Content Include="Views\Signin\Index.cshtml" />
+    <Content Include="Views\Signup\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

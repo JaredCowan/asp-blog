@@ -16,6 +16,9 @@ namespace simpleblog
 
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // Index Page
+            routes.MapRoute("Home", "", new { controller = "Home", action = "Index" }, namespaces);
+
             // Hack for .NET routing engine not liking int and char in url not seperated by a slash
             //
             routes.MapRoute("TagForRealThisTime", "tag/{idAndSlug}", new {controller = "Posts", action = "Tag"}, namespaces);
@@ -31,7 +34,15 @@ namespace simpleblog
 
             routes.MapRoute("Logout", "logout", new { controller = "Auth", action = "Logout" }, namespaces);
 
-            routes.MapRoute("Home", "", new { controller = "Posts", action = "Index" }, namespaces);
+            routes.MapRoute("Contact", "Contact", new { controller = "Contact", action = "Index" }, namespaces);
+
+            routes.MapRoute("Price", "Pricing", new { controller = "Price", action = "Index" }, namespaces);
+
+            routes.MapRoute("Signin", "Sign-In", new { controller = "Signin", action = "Index" }, namespaces);
+
+            routes.MapRoute("Signup", "Sign-up", new { controller = "Signup", action = "Index" }, namespaces);
+
+            routes.MapRoute("Posts", "Blog", new { controller = "Posts", action = "Index" }, namespaces);
 
             routes.MapRoute("Sidebar", "", new {controller = "Layout", action = "Sidebar"}, namespaces);
 

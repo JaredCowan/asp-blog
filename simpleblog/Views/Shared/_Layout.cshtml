@@ -48,12 +48,24 @@
         </div>
         <div class="navbar-collapse collapse thriii-header-background">
           <ul class="nav navbar-nav">
-            <li><a href="javascript:;">Home</a></li>
-            <li class="@SelectedTabClass("blog")"><a href="@Url.RouteUrl("Home")">Blog</a></li>
-            <li><a href="javascript:;">Price</a></li>
-            <li><a href="javascript:;">Contact</a></li>
-            <li><a href="javascript:;">Sign In</a></li>
-            <li><a href="javascript:;">Free Trial</a></li>
+            <li class="@SelectedTabClass("home")">
+              <a href="@Url.RouteUrl("home")">Home</a>
+            </li>
+            <li class="@SelectedTabClass("blog")">
+              <a href="@Url.RouteUrl("Posts")">Blog</a>
+            </li>
+            <li class="@SelectedTabClass("price")">
+              <a href="@Url.RouteUrl("price")">Price</a>
+            </li>
+            <li class="@SelectedTabClass("contact")">
+              <a href="@Url.RouteUrl("contact")">Contact</a>
+            </li>
+            <li class="@SelectedTabClass("signin")">
+              <a href="@Url.RouteUrl("signin")">Sign In</a>
+            </li>
+            <li class="@SelectedTabClass("signup")">
+              <a href="@Url.RouteUrl("signup")">Free Trial</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -63,7 +75,6 @@
   <div class="container">
 
     @RenderBody()
-
 
   </div> <!-- End Container -->
 
