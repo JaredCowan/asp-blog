@@ -28,7 +28,7 @@ namespace simpleblog.Controllers
             {
                 Posts = new PagedData<Post>(posts, totalPostCount, page, PostPerPage)
             });
-        }
+        } // End Index View
 
         public ActionResult Tag(string idAndSlug, int page = 1)
         {
@@ -86,7 +86,7 @@ namespace simpleblog.Controllers
             {
                 Post = post
             });
-        }
+        } // End Show View
 
         private System.Tuple<int, string> SeperateIdAndSlug(string idAndSlug)
         {
@@ -98,6 +98,6 @@ namespace simpleblog.Controllers
             var slug = matches.Result("$2");
 
             return Tuple.Create(id, slug);
-        }
-    }
-}
+        } // End Tuple
+    } // End PostsController
+} // End Namespace

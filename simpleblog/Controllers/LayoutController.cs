@@ -28,7 +28,6 @@ namespace simpleblog.Controllers
                 }).Where(t => t.PostCount > 0).OrderByDescending(p => p.PostCount).Select(
                 tag => new SidebarTag(tag.Id, tag.Name, tag.Slug, tag.PostCount)).ToList()
             });
-        } // End Index
-
+        } // End Sidebar View
     } // End LayoutController
 } // End Namespace

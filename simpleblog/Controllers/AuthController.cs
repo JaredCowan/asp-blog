@@ -17,13 +17,13 @@ namespace simpleblog.Controllers
             return View(new AuthLogin
             {
             });
-        }
+        } // End Login
 
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
             return RedirectToRoute("home");
-        }
+        } // End Logout
 
         [HttpPost]
         public ActionResult Login(AuthLogin form, string returnUrl)
@@ -46,6 +46,6 @@ namespace simpleblog.Controllers
                 return Redirect(returnUrl);
 
             return RedirectToRoute("home");
-        }
-    }
-}
+        } // End HttpPost Login
+    } // End AuthController
+} // End Namespace

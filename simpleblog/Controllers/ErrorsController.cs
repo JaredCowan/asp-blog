@@ -11,11 +11,11 @@ namespace simpleblog.Controllers
         public ActionResult NotFound()
         {
             return View();
-        }
+        } // End NotFound View
 
         public ActionResult Error()
         {
             return View();
-        }
-    }
-}
+        } // End Error View
+    } // End ErrorsController
+} // End Namespace

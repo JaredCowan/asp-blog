@@ -13,6 +13,6 @@ namespace simpleblog.Controllers
         public ActionResult Index()
         {
             return View();
-        }
-    }
-}
+        } // End Index View
+    } // End Signup Controller
+} // End Namespace
