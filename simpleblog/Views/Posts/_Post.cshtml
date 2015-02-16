@@ -32,18 +32,28 @@
       <ul class="list-unstyled">
         @foreach (var tag in Model.Tags.Take(4))
         {
-          <li><a href="javascript:;"><em>@tag.Name</em></a></li>
+          <li>
+            <a href="@Url.RouteUrl("Tag", new {tag.Id, tag.Slug})">
+              <em>@tag.Name</em>
+            </a>
+          </li>
         }
       </ul>
       <div class="shate-view">
         <ul class="list-unstyled">
-          <li><a href="javascript:;">0 View</a></li>
-          <li><a href="javascript:;">0 Share</a></li>
+          <li>
+            <a href="javascript:;">0 View</a>
+          </li>
+          <li>
+            <a href="javascript:;">0 Share</a>
+          </li>
         </ul>
       </div>
     </div>
     <div class="col-lg-10 col-sm-10">
-      <h1><a href="@Url.RouteUrl("Post", new{Model.Id, Model.Slug})">@Model.Title</a></h1>
+      <h1>
+        <a href="@Url.RouteUrl("Post", new {Model.Id, Model.Slug})">@Model.Title</a>
+      </h1>
       <p>
         @*@Html.Raw(Model.Content)*@
         Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
