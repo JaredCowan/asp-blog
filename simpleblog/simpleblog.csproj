@@ -151,6 +151,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Scripts\nicescroll.js" />
+    <Content Include="Content\Scripts\scrollTo.js" />
     <Content Include="Content\Styles\depend\fancybox\blank.gif" />
     <Content Include="Content\Styles\depend\fancybox\fancybox_loading%402x.gif" />
     <Content Include="Content\Styles\depend\fancybox\fancybox_loading.gif" />
@@ -492,8 +494,6 @@
     <Content Include="Content\Scripts\common-scripts.js" />
     <Content Include="Content\Scripts\Forms.js" />
     <Content Include="Content\Scripts\jquery-1.11.2.js" />
-    <Content Include="Content\Scripts\jquery.nicescroll.js" />
-    <Content Include="Content\Scripts\jquery.scrollTo.min.js" />
     <Content Include="Content\Styles\depend\bootstrap.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Styles\depend\font-awesome.css" />

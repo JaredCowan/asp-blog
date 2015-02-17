@@ -28,7 +28,7 @@ namespace simpleblog.App_Start
                 .Include("~/content/scripts/jquery.validate.js")
                 .Include("~/content/scripts/jquery.validate.unobtrusive.js")
                 .Include("~/content/scripts/bootstrap.js")
-                .Include("~/content/styles/fancybox/fancybox.js")
+                .Include("~/content/styles/depend/fancybox/fancybox.js")
                 .Include("~/content/scripts/common-scripts.js"));
 
             bundles.Add(new ScriptBundle("~/admin/post/scripts")
