@@ -1,6 +1,293 @@
-﻿
-@{
+﻿@{
   ViewBag.Title = "Home";
 }
 
-<h1> Hello world</h1>
+<!-- Landing page sticky nav -->
+<div class="thriii__landing">
+
+  <!-- Main content for .thriii__landing -->
+  <section class="thriii__landing--content">
+
+    <!-- slider -->
+    <!-- END thriii__landing-slider -->
+    <!-- END slider -->
+
+    <div class="thriii__landing--content--video" no-select>
+      <div class="thriii__landing--content--inner">
+        <h1 class="thriii__landing--content--inner--header">
+          <span class="thriii-header-text hidden-xs">Thriii:</span> Your Business Simplified
+        </h1>
+
+        <div class="thriii__landing--content--inner--form">
+          <section class="thriii__landing--slider">
+            <div id="c-slide" class="carousel slide auto panel-body">
+              <div class="carousel-inner">
+                <div class="item text-center active">
+                  <img draggable="false" src="@Url.VerdeCdn("~/images/intuit.gif")">
+                  <span><p>Easily Integrate With Your Intuit Products.</p></span>
+                </div>
+                <div class="item text-center">
+                  <img draggable="false" src="@Url.VerdeCdn("~/images/FreshBooks_logo.png")">
+                  <span><p>Easily Integrate With Your FreshBooks Account.</p></span>
+                </div>
+                <div class="item text-center">
+                  <img draggable="false" class="ss" src="@Url.VerdeCdn("~/images/ShipStation-Logo.png")">
+                  <span><p>Easily Integrate With Your ShipStation Account.</p></span>
+                </div>
+              </div>
+              <a data-slide="prev" href="#c-slide" class="left carousel-control">
+                <i class="fa fa-angle-left"></i>
+              </a>
+              <a data-slide="next" href="#c-slide" class="right carousel-control">
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+          </section>
+        </div>
+        <a class="fancybox" href="http://www.adobe.com/jp/events/cs3_web_edition_tour/swfs/perform.swf">
+        </a>
+      </div>
+    </div>
+  </section> <!-- END thriii__landing-content -->
+  <div class="row container thriii__landing--columns hidden-xs" no-select>
+    <div class="col-lg-4 col-md-4 col-sm-4 thriii__landing--columns--box">
+      <section>
+        <div class="f-box">
+          <i class="fa fa-cloud"></i>
+          <h2>Anytime, Anywhere Cloud Access</h2>
+        </div>
+        <!-- <p class="f-text">The foundation to Thriii Warehousing is the 3 E’s: Easy, Efficient, Execution.</p> -->
+      </section>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 thriii__landing--columns--box">
+      <section>
+        <div class="f-box">
+          <!-- <i class="fa fa-warning"></i> -->
+          <img src="@Url.VerdeCdn("~/images/braing.png")" alt="">
+          <h2>Business Intelligence</h2>
+        </div>
+        <!-- <p class="f-text">Find out how Verde Circle is transforming the landscape of Small Business cloud-based software.</p> -->
+      </section>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 thriii__landing--columns--box">
+      <section>
+        <div class="f-box">
+          <i class="fa fa-smile-o"></i>
+          <h2>Free Customer Service</h2>
+        </div>
+        <!-- <p class="f-text">More than just charts & graphs. Thriii BI provides easily digestible operational insights that give you actionable items to improve your bottom line.</p> -->
+      </section>
+    </div>
+  </div>
+  <!-- Sticky navbar -->
+  <div class="thriii__landing--nav">
+    <img class="stick-navbar-logo" src="@Url.VerdeCdn("~/images/logo-name-vc.jpg")" alt="navbar-logo">
+    <nav>
+      <!-- sticky navbar nav -->
+      <a class="header-top-link-fixed" href="#top" title="top of page"></a>
+      <ul>
+        <!-- sticky navbar nav ul -->
+        <li class="thriii__landing--nav--item sales">
+          <a href="#sales-orders">
+            <i class="fa fa-users"></i>
+            <span> Orders </span>
+          </a>
+        </li>
+        <li class="thriii__landing--nav--item warehouse">
+          <a href="#warehousing">
+            <i class="fa fa-building-o"></i>
+            <span class="hidden-xs">Warehousing</span>
+            <span class="visible-xs">Warehouse</span>
+          </a>
+        </li>
+        <li class="thriii__landing--nav--item payments">
+          <a href="#payments">
+            <i class="fa fa-money"></i>
+            <span> Accounting </span>
+          </a>
+        </li>
+        <li class="thriii__landing--nav--item shipping">
+          <a href="#shipping">
+            <i class="fa fa-truck"></i>
+            <span> Logistics </span>
+          </a>
+        </li>
+        <li class="thriii__landing--nav--stuck-signup-button">
+          <a href="@Url.RouteUrl("price")" class="btn btn-clear"> Sign Up <span class="hidden-xs">Free</span> </a>
+        </li>
+      </ul> <!-- END sticky navbar > ul -->
+    </nav> <!-- END sticky navbar -->
+  </div> <!-- END .thriii__landing-nav -->
+</div> <!-- END .thriii__landing -->
+<div class="clearfix">
+
+</div> <!-- CLOSING clearfix -->
+
+<div id="sales-orders" class="fix thriii__sales-orders thriii-feature-section">
+  <div class="container-fluid">
+    <div class="row feature-section">
+      <div class="feature-section-title-img col-lg-4 col-md-12 col-sm-12">
+        <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/sampledash.jpg")">
+      </div>
+      <div class="clearfix visible-sm">
+      </div> <!-- END clearfix -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/sales.jpg")">
+        </div>
+        <span class="feature-title">Sales Orders</span>
+        <p class="feature-content"> Multi source sales orders allows you to enter orders manually, import in bulk via CSV, and 2-way sync orders with 3rd party APIs. This allows you to receive and update sales orders from just about every possible source quickly and automatically.</p>
+      </div> <!-- CLOSING col-xs-6 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/invoice.jpg")">
+        </div>
+        <span class="feature-title">Invoices &amp; Sales Receipts</span>
+        <p class="feature-content">You can operate Thriii as a standalone Invoicing and Sales Receipt system as well as perform 2-way sync of invoices and sales receipts with QuickBooks (other popular accounting software coming soon). Reduces double entry. An optional add-on for invoice consolidation is available to help avoid costly double entry and reduce reconciliation time.</p>
+      </div> <!-- CLOSING col-xs-6 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/purchaseorder1.jpg")">
+          >
+        </div>
+        <span class="feature-title">Purchase Orders</span>
+        <p class="feature-content">Multi-source purchase orders allows you to enter and manage POs via manual entry, bulk import via CSV, and 2-way sync with 3rd party APIs. Easily manage deposits and partial payments to ensure proper accounting of your purchases. Optional add-on for drop-ship vendors allows for automation of drop-ship orders and vendors.</p>
+      </div> <!-- CLOSING col-xs-6 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/inventory.jpg")">
+        </div>
+        <span class="feature-title">Inventory</span>
+        <p class="feature-content">Thriii allows for easy management of inventory no matter what your requirements. From simple inventory counts to complex multi-warehouse/multi-location warehouses, Thriii allows you to manage your inventory, inventory reports, and integrations with 3rd parties as quickly and easily as is humanly possible.</p>
+      </div> <!-- CLOSING col-xs-6 -->
+    </div> <!-- END row -->
+    <div class="clearfix"></div> <!-- END clearfix -->
+  </div> <!-- CLOSING container -->
+</div> <!-- END Sales-orders Section -->
+<div id="warehousing" class="thriii__warehousing ">
+  <div class="container-fluid">
+    <div class="row feature-section">
+      <div class="feature-section-title-img col-lg-4 col-md-12 col-sm-12">
+        <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/sampledash.jpg")">
+      </div>
+      <div class="clearfix visible-sm">
+      </div> <!-- END clearfix -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/warehouse2.jpg")">
+        </div>
+        <span class="feature-title">Multi-Location Support</span>
+        <p class="feature-content">True multi-warehouse/multi-location allows you to easily manage inventory across multiple warehouses each with its own sets of locations. Optional Serial and Kit add-ons allow for granular product management as well as simple and complex kitting, assembly, and unassembled processes.</p>
+      </div> <!-- CLOSING col-xs-6 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/allocation.jpg")">
+        </div>
+        <span class="feature-title">Allocations</span>
+        <p class="feature-content">Often a feature only seen in large enterprise solutions, inventory allocations gives you more robust management of your sales orders, inventory holds, and inventory reports. </p>
+      </div> <!-- CLOSING col-xs-6 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/cyclecount.jpg")">
+        </div>
+        <span class="feature-title">Cycle Counts</span>
+        <p class="feature-content">A staple of warehousing best practices, cycle counts in Thriii ensure that you keep your inventory properly accounted for, including inventory adjustments that sync with your accounting system and allow you to account for shrinkage, theft, loss, and spoilage.</p>
+      </div> <!-- CLOSING col-xs-6 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/itemcatalog.jpg")">
+        </div>
+        <span class="feature-title">Item Catalog</span>
+        <p class="feature-content">A 2-way sync of the item catalog with 3rd party systems (including your accounting platform) makes managing and creating items a breeze. Thriii Core and Thriii ERP provide an advanced item catalog that allows you to define detailed product specifications. </p>
+      </div> <!-- CLOSING col-xs-6 -->
+    </div> <!-- END row -->
+    <div class="clearfix"></div> <!-- END clearfix -->
+  </div> <!-- CLOSING container -->
+</div>
+
+<div id="payments" class="thriii__payments thriii__content__section">
+  <div class="container-fluid">
+    <div class="row feature-section">
+      <div class="feature-section-title-img col-lg-4 col-md-12 col-sm-12">
+        <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/sampledash.jpg")">
+      </div>
+      <div class="clearfix visible-sm">
+      </div> <!-- END clearfix -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/customers.jpg")">
+        </div>
+        <span class="feature-title">Customers</span>
+        <p class="feature-content">A 2-way sync of customers with your 3rd party systems (including your accounting platform) makes managing customers and their orders as simple as a few clicks. You also have the ability to manage multiple contacts across each of your customers to help ensure that the proper communication is delivered to the appropriate customer contact.</p>
+      </div> <!-- CLOSING col-xs-6 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/manufacturers.jpg")">
+        </div>
+        <span class="feature-title">Vendors &amp; Manufactures</span>
+        <p class="feature-content">Easily manage all of your suppliers and their contacts to ensure that all your purchases are made in a timely manner and deliveries match up with your sales order demands. Manually enter, bulk import via CSV, or 2-way sync via APIs with 3rd parties allows for easy management of all your important suppliers and related activities.</p>
+      </div> <!-- CLOSING col-xs-6 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/bills.jpg")">
+        </div>
+        <span class="feature-title">Bills, Payments &amp; Invoices</span>
+        <p class="feature-content">Track your Bills and Payments easily and with reduced data entry. Also automate your invoicing and payments to ensure timely cash-flow for your business. (Stripe & PayPal API integration)</p>
+      </div> <!-- CLOSING col-xs-6 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/employees.jpg")">
+        </div>
+        <span class="feature-title">Employees &amp; Sales Reps</span>
+        <p class="feature-content">Manage your sales reps, customer service, and warehouse staff all from a single location. Limit their access to only the parts of Thriii that apply to them and review their activities to ensure the highest level of productivity.</p>
+      </div> <!-- CLOSING col-xs-6 -->
+    </div> <!-- END row -->
+    <div class="clearfix"></div> <!-- END clearfix -->
+  </div> <!-- CLOSING container -->
+</div>
+
+<div id="shipping" class="thriii__shipping thriii__content__section">
+  <div class="container-fluid">
+    <div class="row feature-section">
+      <div class="feature-section-title-img col-lg-4 col-md-12 col-sm-12">
+        <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/sampledash.jpg")">
+      </div>
+      <div class="clearfix visible-sm">
+      </div> <!-- END clearfix -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/ssandups.png")">
+        </div>
+        <span class="feature-title">Shipping Integration</span>
+        <p class="feature-content">Thriii integrates seemlessly via the cloud with the most popular shipping systems, allowing you to keep your shipping system and carriers of choice. Our pick, pack, ship process allows you ease of processing your fulfillment needs as efficiently as possible with useful reports. Palletized shipments are also a breeze with Thriii’s built-in pallet labels and templates for creating BOLs. We also offer robust shipping logic for power users who really want to dive into every detail of fulfillment.</p>
+      </div> <!-- CLOSING col-xs-6 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/itemreceipts.jpg")">
+        </div>
+        <span class="feature-title">Item Receipts</span>
+        <p class="feature-content">Receiving items on Purchase Orders is as easy as 1-2-3. Thriii’s simple purchase order receiving process allows you to quickly receive inventory across all your warehouses with minimal work.</p>
+      </div> <!-- CLOSING col-xs-6 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/returns.jpg")">
+        </div>
+        <span class="feature-title">RMA &amp; Returns</span>
+        <p class="feature-content">Thriii’s RMA/Returns process is created to allow you to easily handle returns that don’t go through the preferred RMA process just as easily as a return with all the proper RMA paperwork. Easy to returns for refund, repair, or exchange means a lot of saved time an effort by your warehouse staff.</p>
+      </div> <!-- CLOSING col-xs-6 -->
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 feature-wrapper">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-4 feature-hero">
+          <img class="thumbnail img-responsive feature-img" src="@Url.VerdeCdn("~/images/stockmove.jpg")">
+        </div>
+
+        <span class="feature-title">Stock Movements</span>
+        <p class="feature-content">Moving stock from one location in the same warehouse is about as easy as it gets. Thriii also makes moving stock from one warehouse to another just as easy, allowing you create all necessary documents to move inventory between multiple locations and multiple warehouses as easily as moving a single item to another location in the same warehouse.</p>
+      </div> <!-- CLOSING col-xs-6 -->
+    </div> <!-- END row -->
+    <div class="clearfix"></div> <!-- END clearfix -->
+  </div> <!-- CLOSING container -->
+</div>
+<div class="back-to-top">
+  <a href="#top" title="back-to-top"></a>
+  <i class="fa fa-caret-square-o-up fa-1x"></i> Top
+</div>

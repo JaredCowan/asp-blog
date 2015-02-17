@@ -7,7 +7,7 @@ body {
   color: #797979;
   font-family: 'Open Sans', sans-serif;
   padding-top: 100px;
-  margin: 70px 0 0 0 !important;
+  margin: 0 !important;
   font-size:13px;
 }
 *[no-select] {
@@ -341,6 +341,7 @@ p {line-height: 22px}
 
 .header-frontend .navbar {
   min-height: 100px;
+  z-index: 4000;
 }
 
 .header-frontend .navbar-nav > li  {
@@ -398,7 +399,7 @@ p {line-height: 22px}
   border: 1px solid #fff;
   -webkit-box-shadow: none;
           box-shadow: none;
-  background: url("../img/search-icon.jpg") no-repeat 10px 8px;
+  background: url("http://az721473.vo.msecnd.net/cdn/images/search-icon.jpg") no-repeat 10px 8px;
   padding:0 5px 0 35px;
   color: #fff;
 }
@@ -2279,7 +2280,7 @@ body {
 }
 .thriii__landing--slider .carousel-inner {
   height: 255px;
-  background: rgba(255,255,255,1);
+  background: rgb(255,255,255);
 }
 .thriii__landing--slider .carousel-inner .item {
   /*-webkit-transition: all 1.4s ease;*/
@@ -2335,14 +2336,14 @@ body {
   right: -30px;
   width: 260px;
   height: 110px;
-  background: transparent url("../img/click-to-play.png") center center no-repeat;
+  background: transparent url("http://az721473.vo.msecnd.net/cdn/images/click-to-play.png") center center no-repeat;
   z-index: 1000;
   -webkit-transition: background .4s ease-in-out;
   -o-transition:      background .4s ease-in-out;
   transition:         background .4s ease-in-out;
 }
 .thriii__landing--content--inner > a:hover {
-  background: transparent url("../img/click-to-play-hover.png") center center no-repeat;
+  background: transparent url("http://az721473.vo.msecnd.net/cdn/images/click-to-play-hover.png") center center no-repeat;
 }
 .thriii__landing--content--inner > a > img {
   position: absolute;
@@ -2352,7 +2353,7 @@ body {
   /*clip: rect(0px,517px,215px,236px);*/
 }
 .thriii__landing--content--inner .thriii__landing--content--inner--header {
-  background: url(../img/thriii.png);
+  background: url("http://az721473.vo.msecnd.net/cdn/images/thriii.png");
   background-position: left;
   -webkit-background-size: 45px;
           background-size: 45px; 

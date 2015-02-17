@@ -33,17 +33,15 @@
   <title>Verde Circle - @ViewBag.Title</title>
   @Styles.Render("~/styles")
 </head>
-<body>
+<body id="top">
 <!--header start-->
 @*@(ViewBag.Title == "Home" ? Html.Action("Homebar", "Layout") : Html.Action("Navbar", "Layout"))*@
   @Html.Action("Navbar", "Layout")
 <!--header end-->
 
-  <div class="container">
 
     @RenderBody()
 
-  </div> <!-- End Container -->
 
   <footer class="footer thriii__footer">
     <div class="container">

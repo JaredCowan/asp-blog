@@ -42,10 +42,10 @@ namespace simpleblog
             routes.MapRoute("Price", "Pricing", new { controller = "Price", action = "Index" }, namespaces);
 
             // Public Signin Page
-            routes.MapRoute("Signin", "Sign-In", new { controller = "Signin", action = "Index" }, namespaces);
+            routes.MapRoute("Signin", "Signin", new { controller = "Signin", action = "Index" }, namespaces);
 
             // Public Signup Page
-            routes.MapRoute("Signup", "Sign-up", new { controller = "Signup", action = "Index" }, namespaces);
+            routes.MapRoute("Signup", "Signup", new { controller = "Signup", action = "Index" }, namespaces);
 
             // Blog (posts) Page
             routes.MapRoute("Posts", "Blog", new { controller = "Posts", action = "Index" }, namespaces);
