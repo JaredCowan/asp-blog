@@ -166,7 +166,7 @@
     <Content Include="Content\Styles\depend\fancybox\helpers\jquery.fancybox-thumbs.css" />
     <Content Include="Content\Styles\depend\fancybox\helpers\jquery.fancybox-thumbs.js" />
     <Content Include="Content\Styles\depend\fancybox\fancybox.css" />
-    <Content Include="Content\Styles\depend\fancybox\fancybox.js" />
+    <Content Include="Content\Scripts\fancybox.js" />
     <Content Include="Content\Styles\depend\fancybox\fancybox.pack.js" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Scripts\AdminPosts.js" />
