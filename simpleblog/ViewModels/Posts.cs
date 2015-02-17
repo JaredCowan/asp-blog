@@ -22,5 +22,4 @@ namespace simpleblog.ViewModels
         public Tag Tag { get; set; }
         public PagedData<Post> Posts { get; set; }
     } // End PostsTag
-
 } // End namespaces

@@ -29,4 +29,18 @@ namespace simpleblog.ViewModels
         public IEnumerable<SidebarTag> Tags { get; set; } 
     } // End LayoutSidebar
 
+    public class LayoutNavbar
+    {
+        public bool IsLoggedIn { get; set; }
+        public string Username { get; set; }
+        public bool IsAdmin { get; set; }
+        public IEnumerable<SidebarTag> Tags { get; set; }
+    } // End LayoutNavbar
+
+    public class LayoutHomebar
+    {
+        public bool IsLoggedIn { get; set; }
+        public string Username { get; set; }
+        public bool IsAdmin { get; set; }
+    } // End LayoutHomebar
 } //End Namespace

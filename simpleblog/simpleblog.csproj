@@ -620,6 +620,8 @@
     <Content Include="Views\Price\Index.cshtml" />
     <Content Include="Views\Signin\Index.cshtml" />
     <Content Include="Views\Signup\Index.cshtml" />
+    <Content Include="Views\Layout\Navbar.cshtml" />
+    <Content Include="Views\Layout\Homebar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -53,9 +53,15 @@ namespace simpleblog
             // Partial Sidebar Layout
             routes.MapRoute("Sidebar", "", new {controller = "Layout", action = "Sidebar"}, namespaces);
 
+            // Partial Navbar Layout
+            routes.MapRoute("Navbar", "", new { controller = "Layout", action = "Navbar" }, namespaces);
+
+            // Partial Homebar Layout
+            routes.MapRoute("Homebar", "", new { controller = "Layout", action = "Homebar" }, namespaces);
+
             // routes.MapRoute("Error404", "errors/404", new {controller = "Errors", action = "NotFound"}, namespaces);
 
             // routes.MapRoute("Error500", "errors/500", new { controller = "Errors", action = "Error" }, namespaces);
-        }
-    }
-}
+        } // End RegisterRoutes
+    } // End RouterConfig Class
+} // End Namespace
