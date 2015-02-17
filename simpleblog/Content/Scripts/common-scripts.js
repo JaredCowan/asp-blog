@@ -115,6 +115,6 @@ $(function () {
 });
 
 //    fancybox
-$(window).on("load", function () {
+$(window).load(function () {
     $(".fancybox").fancybox();
 });
