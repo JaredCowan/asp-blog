@@ -18,7 +18,7 @@ namespace simpleblog.App_Start
                 .Include("~/content/styles/depend/theme.css")
                 .Include("~/content/styles/depend/bootstrap.css")
                 .Include("~/content/styles/depend/font-awesome.css")
-                .Include("~/content/styles/depend/fancybox.css")
+                .Include("~/content/styles/depend/fancybox/fancybox.css")
                 .Include("~/content/styles/depend/style.css")
                 .Include("~/content/styles/depend/style-responsive.css")
                 .Include("~/content/styles/dist/frontend.css"));
@@ -28,7 +28,7 @@ namespace simpleblog.App_Start
                 .Include("~/content/scripts/jquery.validate.js")
                 .Include("~/content/scripts/jquery.validate.unobtrusive.js")
                 .Include("~/content/scripts/bootstrap.js")
-                .Include("~/content/scripts/fancybox.js")
+                .Include("~/content/styles/fancybox/fancybox.js")
                 .Include("~/content/scripts/common-scripts.js"));
 
             bundles.Add(new ScriptBundle("~/admin/post/scripts")
