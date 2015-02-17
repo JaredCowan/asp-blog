@@ -27,9 +27,7 @@ namespace simpleblog.App_Start
                 .Include("~/content/scripts/jquery-2.1.3.js")
                 .Include("~/content/scripts/jquery.validate.js")
                 .Include("~/content/scripts/jquery.validate.unobtrusive.js")
-                .Include("~/content/scripts/bootstrap.js")
-                .Include("~/content/scripts/jquery.scrollTo.min.js")
-                .Include("~/content/scripts/jquery.nicescroll.js"));
+                .Include("~/content/scripts/bootstrap.js"));
 
             bundles.Add(new ScriptBundle("~/admin/post/scripts")
                 .Include("~/content/scripts/AdminPosts.js"));
