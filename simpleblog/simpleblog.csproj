@@ -156,9 +156,9 @@
     <Content Include="Content\Styles\depend\fancybox\helpers\jquery.fancybox-media.js" />
     <Content Include="Content\Styles\depend\fancybox\helpers\jquery.fancybox-thumbs.css" />
     <Content Include="Content\Styles\depend\fancybox\helpers\jquery.fancybox-thumbs.js" />
-    <Content Include="Content\Styles\depend\fancybox\jquery.fancybox.css" />
-    <Content Include="Content\Styles\depend\fancybox\jquery.fancybox.js" />
-    <Content Include="Content\Styles\depend\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="Content\Styles\depend\fancybox.css" />
+    <Content Include="Content\Scripts\fancybox.js" />
+    <Content Include="Content\Styles\depend\fancybox\fancybox.pack.js" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Scripts\AdminPosts.js" />
     <Content Include="Content\Scripts\ckeditor\adapters\jquery.js" />
