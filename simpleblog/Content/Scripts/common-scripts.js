@@ -115,4 +115,4 @@ $(function () {
         }
     }); // Close
 
-}(jQuery));
+});
