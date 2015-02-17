@@ -4,21 +4,19 @@
   ViewBag.Title = "Login";
 }
 
-@using (Html.BeginForm())
-{
-  @Html.ValidationSummary()
-
-  <div>
-    @Html.LabelFor(x => x.Username)
-    @Html.EditorFor(x => x.Username)
-  </div>
-
-  <div>
-    @Html.LabelFor(x => x.Password)
-    @Html.EditorFor(x => x.Password)
-  </div>
-
-  <div>
-    <input type="submit" value="Login" class="btn btn-success" />
-  </div>
-}
+<div class="container">
+  <form class="form-signin" action="/login" method="post">
+    @Html.ValidationSummary()
+    <div class="validation-summary-valid" data-valmsg-summary="true">
+      <ul>
+        <li style="display: none"></li>
+      </ul>
+    </div>
+    <h2 class="form-signin-heading">sign in now</h2>
+    <div class="login-wrap">
+      <input type="text" class="form-control" placeholder="Username" id="Username" name="Username" value="" autofocus>
+      <input type="password" class="form-control" placeholder="Password" id="Password" name="Password" value="">
+      <input class="btn btn-lg btn-login btn-block" type="submit" value="Sign in"/>
+    </div>
+  </form>
+</div>

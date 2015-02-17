@@ -1,6 +1,76 @@
-﻿
-@{
+﻿@{
   ViewBag.Title = "Signup";
 }
 
-<h1> Hello from signup</h1>
+<!--main content start-->
+<section>
+  <div class="text-center feature-head">
+    <h1> Easy Signup </h1>
+    <p><strong>No credit card required.</strong> <br> No risk. No hidden fees. Cancel at anytime. </p>
+  </div>
+  <section class="wrapper site-min-height">
+    <!-- page start-->
+    <div class="row">
+      <div class="center-block">
+        <section class="panel">
+          <div class="panel-body">
+            <form class="form-horizontal thriii-signup-form" id="default">
+              <fieldset>
+                <legend></legend>
+                <div class="form-group">
+                  <div class="col-xs-12">
+                    <label class="col-xs-12 control-label">Account Type</label>
+                    <select class="form-control m-bot15">
+                      <option>Thriii Books - $30/month</option>
+                      <option>Thriii Core - $50/month</option>
+                      <option>Thriii MicroERP - $70/month</option>
+                    </select>
+                  </div>
+                  <div class="clearfix"> </div>
+                  <div class="col-xs-12 col-sm-6 first-name">
+                    <label class="col-xs-12 control-label">First Name</label>
+                    <input type="text" class="form-control" placeholder="First Name" autofocus>
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    <label class="col-xs-12 control-label">Last Name</label>
+                    <input type="text" class="form-control" placeholder="Last Name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-lg-12">
+                    <label class="col-xs-12 control-label">Company Name</label>
+                    <input type="text" class="form-control" placeholder="Company Name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-lg-12">
+                    <label class="col-xs-12 control-label">Email Address</label>
+                    <input type="text" class="form-control" placeholder="Email Address">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-lg-12">
+                    <label class="col-xs-12 control-label">Password</label>
+                    <input type="password" class="form-control" placeholder="Password" autocomplete="off">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-lg-12">
+                    <label class="col-xs-12 control-label">Confirm Password</label>
+                    <input type="password" class="form-control" placeholder="Confirm Password" autocomplete="off">
+                  </div>
+                </div>
+                <div class="checkboxes">
+                  <label class="label_check" for="signup-terms">
+                    <input name="signup-terms" id="signup-terms" value="1" type="checkbox"> I agree to the terms &amp; conditions.
+                  </label>
+                </div>
+              </fieldset>
+              <a class="finish btn btn-block btn-danger" href="javascript:;">Sign Me Up!</a>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</section>

@@ -1,10 +1,10 @@
-$(function() {
+$(function () {
 
     //    fancybox
     jQuery(".fancybox").fancybox();
-    
+
     //    nicescroll
-    $(document).ready(function() { $("html").niceScroll({ styler: "fb", cursorcolor: "#8cd600", cursorwidth: '9', cursorborderradius: '0px', background: '#323232', spacebarenabled: false, cursorborder: '', zindex: '9000' }); });
+    $(document).ready(function () { $("html").niceScroll({ styler: "fb", cursorcolor: "#8cd600", cursorwidth: '9', cursorborderradius: '0px', background: '#323232', spacebarenabled: false, cursorborder: '', zindex: '9000' }); });
 
     //    tool tips
     $('.tooltips').tooltip();
@@ -13,9 +13,9 @@ $(function() {
     $('.popovers').popover();
 
 
-    $(function() {
+    $(function () {
         var thriiiCarousel = $(".thriii__landing--slider .carousel");
-        thriiiCarousel.each(function() {
+        thriiiCarousel.each(function () {
             $(this).carousel({
                 interval: 4000,
                 duration: 700,
@@ -26,10 +26,9 @@ $(function() {
     });
 
 
-    var _url = window.location.href.slice(7).indexOf("/")
-      , _path = window.location.pathname == "/";
+    var _path = window.location.pathname == "/";
 
-    if (_url != -1 || _path) {
+    if (_path) {
         //  sticky nav
         $(window).on('scroll load', function () {
             var nav = $(".thriii__landing--nav")
