@@ -1,7 +1,7 @@
 $(function () {
 
     //    fancybox
-    jQuery(".fancybox").fancybox();
+    //$(".fancybox").fancybox();
 
     //    nicescroll
     $(document).ready(function () { $("html").niceScroll({ styler: "fb", cursorcolor: "#8cd600", cursorwidth: '9', cursorborderradius: '0px', background: '#323232', spacebarenabled: false, cursorborder: '', zindex: '9000' }); });
@@ -61,7 +61,7 @@ $(function () {
             $('html, body').animate({
                     scrollTop: el_scroll_to
                 }, 800
-            )
+            );
             window.location.name = el;
         }); //  END scroll to section on click
 
@@ -79,23 +79,23 @@ $(function () {
                 $el4pos = $("#shipping").position().top;
 
             if ($windowheight < $el1pos) {
-                $nav.removeClass('active')
+                $nav.removeClass('active');
             } else {
                 if (($el1pos <= $windowheight)) {
-                    $nav.removeClass('active')
-                    $('.sales').addClass('active')
+                    $nav.removeClass('active');
+                    $('.sales').addClass('active');
                 }
                 if (($el2pos <= $windowheight)) {
-                    $nav.removeClass('active')
-                    $('.warehouse').addClass('active')
+                    $nav.removeClass('active');
+                    $('.warehouse').addClass('active');
                 }
                 if (($el3pos <= $windowheight)) {
-                    $nav.removeClass('active')
-                    $('.payments').addClass('active')
+                    $nav.removeClass('active');
+                    $('.payments').addClass('active');
                 }
                 if ($el4pos <= $windowheight) {
-                    $nav.removeClass('active')
-                    $('.shipping').addClass('active')
+                    $nav.removeClass('active');
+                    $('.shipping').addClass('active');
                 }
             }
         }); // End Scrollspy
