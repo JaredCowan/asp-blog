@@ -30,7 +30,7 @@ namespace simpleblog.App_Start
                 .Include("~/content/scripts/bootstrap.js")
                 .Include("~/content/scripts/jquery.scrollTo.min.js")
                 .Include("~/content/scripts/jquery.nicescroll.js")
-                .Include("~/content/styles/depend/fancybox/jquery.fancybox.pack.js")
+                .Include("~/content/styles/depend/fancybox/jquery.fancybox.js")
                 .Include("~/content/scripts/common-scripts.js"));
 
             bundles.Add(new ScriptBundle("~/admin/post/scripts")
