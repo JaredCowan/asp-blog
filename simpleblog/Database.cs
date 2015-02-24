@@ -10,7 +10,7 @@ using simpleblog.Models;
 namespace simpleblog
 {
     public static class Database
-    {
+    { 
         private const string SessionKey = "simpleblog.Database.SessionKey";
 
         private static ISessionFactory _sessionFactory;
