@@ -1,24 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Optimization;
 
 namespace simpleblog.App_Start
 {
     public class BundleConfig
     {
+        public static void AddDefaultIgnorePatterns(IgnoreList ignoreList)
+        {
+            if (ignoreList != null)
+            {
+                ignoreList.Ignore("*.intellisense.js");
+                ignoreList.Ignore("*-vsdoc.js");
+                ignoreList.Ignore("*.min.js");
+                ignoreList.Ignore("*.min.css");
+                ignoreList.Ignore("*.css.map");
+            }
+            else
+            {
+                throw new ArgumentNullException("ignoreList");
+            }
+        }
+
         public static void RegisterBundles(BundleCollection bundles)
         {
+            // Switch some content to CDN path
+            // bundles.UseCdn = true;
+            // var jqueryCdnPath = "";
+
+            // bundles.Add(new ScriptBundle("~/bundles/jquery", jqueryCdnPath)
+            //    .Include("~/content/scripts/jquery-2.1.3.js"));
+
             bundles.Add(new StyleBundle("~/admin/styles")
                 .Include("~/content/styles/depend/bootstrap.css")
-                .Include("~/content/styles/depend/bootstrap.css.map")
                 .Include("~/content/styles/dist/backend.css"));
 
             bundles.Add(new StyleBundle("~/styles")
                 .Include("~/content/styles/depend/theme.css")
                 .Include("~/content/styles/depend/bootstrap.css")
-                .Include("~/content/styles/depend/bootstrap.css.map")
                 .Include("~/content/styles/depend/font-awesome.css")
                 .Include("~/content/styles/depend/fancybox/fancybox.css")
                 .Include("~/content/styles/depend/style.css")
@@ -45,6 +63,8 @@ namespace simpleblog.App_Start
                 .Include("~/content/scripts/jquery.validate.unobtrusive.js")
                 .Include("~/content/scripts/bootstrap.js")
                 .Include("~/content/scripts/Forms.js"));
+
+            BundleTable.EnableOptimizations = true;
         }
     }
 }

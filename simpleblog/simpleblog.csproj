@@ -507,7 +507,6 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Content\Styles\depend\bootstrap.css.map" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Content\Scripts\bootstrap.js" />
     <Content Include="Areas\Admin\Views\Posts\Index.cshtml" />
@@ -543,7 +542,6 @@
     <Content Include="Grunt\config.json" />
     <None Include="README.md" />
     <Content Include="Grunt\test.js" />
-    <Content Include="LICENSE.txt" />
     <Content Include="Content\Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Posts\Index.cshtml" />
