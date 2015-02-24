@@ -21,12 +21,17 @@
                 @Model.Post.CreatedAt.ToLocalTime().ToString("MMMM")
               </span>
             </div>
-            <div class="comnt-wrap">
-              <span class="comnt-ico">
-                <i class="fa fa-comments"></i>
-              </span>
-              <span class="value">15</span>
-            </div>
+            @if (User.IsInRole("admin"))
+            {
+              <div class="comnt-wrap">
+                <span class="comnt-ico">
+                  Admin
+                </span>
+                <span class="value">
+                  <a href="@Url.Action("Edit", new {area = "admin", id = Model.Post.Id})">Edit</a>
+                </span>
+              </div>
+            }
           </div>
           <div class="col-lg-10 col-sm-10">
             <div class="blog-img">
@@ -38,7 +43,7 @@
         <div class="row">
           <div class="col-lg-2 col-sm-2 text-right">
             <div class="author">
-              By <a href="#">@Model.Post.User.Username</a>
+              By <a href="javascript:;">@Model.Post.User.Username</a>
             </div>
             <ul class="list-unstyled">
               @foreach (var tag in Model.Post.Tags.Take(4))
@@ -50,13 +55,6 @@
                 </li>
               }
             </ul>
-            <div class="shate-view">
-              <ul class="list-unstyled">
-                <li><a href="javascript:;">0 View</a></li>
-                <li><a href="javascript:;">0 Share</a></li>
-
-              </ul>
-            </div>
           </div>
           <div class="col-lg-10 col-sm-10">
             <h1><a href="javascript:;">@Model.Post.Title</a></h1>

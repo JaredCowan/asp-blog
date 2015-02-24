@@ -11,6 +11,11 @@ body {
   margin: 0 !important;
   font-size:13px;
 }
+
+.post-title > a {
+  color: #000;
+}
+
 *[no-select] {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -51,6 +56,10 @@ body {
 
 .login-body {
   background-color: #f1f2f7;
+}
+
+.panel-heading a {
+  color: #000;
 }
 
 .form-signin {
@@ -1548,9 +1557,11 @@ ul.about-flex-slides {
   -webkit-border-radius: 4px 4px 0 0;
   font-size: 20px;
 }
+.comnt-wrap .value, a {
+  color: #fff;
+}
 .comnt-wrap .value {
   background: #2c3bad;
-  color: #fff;
   border-radius: 0 0 4px 4px;
   -webkit-border-radius:0 0 4px 4px;
 }
@@ -1591,6 +1602,14 @@ ul.about-flex-slides {
   color: #475168;
 }
 
+.author + .list-unstyled a {
+  color: #2c3bad;
+}
+
+.author + .list-unstyled a:hover {
+  color: #000;
+}
+
 .shate-view {
   margin-top:20px ;
 }
@@ -1620,7 +1639,6 @@ ul.about-flex-slides {
 .media p {
   line-height: normal;
 }
-
 ul.tag  {
   display: inline-block;
   width: 100%;
@@ -1633,9 +1651,19 @@ ul.tag li {
 }
 ul.tag li a {
   border: 1px solid #e8e8e8;
-  padding: 0 10px;
-  border-radius:4px ;
   -webkit-border-radius:4px ;
+  border-radius: 4px;
+}
+
+.tag a {
+  color: #2c3bad;
+  padding: 3px 9px;
+  background-color: rgb(167, 255, 0);
+}
+
+.tag a:hover {
+  color: #fff;
+  background-color: rgb(140, 214, 0);
 }
 
 .media img.media-object {
@@ -1644,7 +1672,6 @@ ul.tag li a {
   height: 80px;
   width: 80px;
 }
-
 
 /*footer*/
 
@@ -2922,7 +2949,7 @@ img.sales-feature-img {
 
 /* Pricing */
 .pricing-container {
-  margin-top: 100px;
+  margin-top: 40px;
 }
 .feature-head {
   cursor: default;
@@ -3185,6 +3212,10 @@ overflow: visible;
 .login-body,
 #blog-page {
   /*margin-top: 150px !important;*/
+}
+#blog-page {
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 /* END Login Page */
 

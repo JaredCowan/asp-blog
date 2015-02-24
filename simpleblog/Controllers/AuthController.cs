@@ -22,7 +22,7 @@ namespace simpleblog.Controllers
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
-            return RedirectToRoute("home");
+            return RedirectToRoute("posts");
         } // End Logout
 
         [HttpPost]
@@ -45,7 +45,7 @@ namespace simpleblog.Controllers
             if (!string.IsNullOrWhiteSpace(returnUrl))
                 return Redirect(returnUrl);
 
-            return RedirectToRoute("home");
+            return RedirectToRoute("posts");
         } // End HttpPost Login
     } // End AuthController
 } // End Namespace
