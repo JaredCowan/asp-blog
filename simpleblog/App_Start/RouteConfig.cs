@@ -59,6 +59,9 @@ namespace simpleblog
             // Partial Homebar Layout
             routes.MapRoute("Homebar", "", new { controller = "Layout", action = "Homebar" }, namespaces);
 
+            // Partial TagCloud Layout
+            routes.MapRoute("TagCloud", "", new { controller = "Layout", action = "TagCloud" }, namespaces);
+
             // routes.MapRoute("Error404", "errors/404", new {controller = "Errors", action = "NotFound"}, namespaces);
 
             // routes.MapRoute("Error500", "errors/500", new { controller = "Errors", action = "Error" }, namespaces);

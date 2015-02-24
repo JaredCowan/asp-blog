@@ -43,4 +43,9 @@ namespace simpleblog.ViewModels
         public string Username { get; set; }
         public bool IsAdmin { get; set; }
     } // End LayoutHomebar
+
+    public class LayoutTagCloud
+    {
+        public IEnumerable<SidebarTag> Tags { get; set; }
+    } // End LayoutTagCloud
 } //End Namespace

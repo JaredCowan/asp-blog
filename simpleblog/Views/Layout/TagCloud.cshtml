@@ -1,0 +1,20 @@
+﻿@model simpleblog.ViewModels.LayoutTagCloud
+
+@{
+    Layout = null;
+}
+
+@if (Model.Tags.Any())
+{
+  <div class="tags">
+    <h3>Tags</h3>
+    <ul class="list-unstyled tag">
+      @foreach (var tag in Model.Tags.Take(10))
+      {
+        <li>
+          <a href="@Url.RouteUrl("Tag", new {tag.Id, tag.Slug})">@tag.Name</a>
+        </li>
+      }
+    </ul>
+  </div>
+}

@@ -2,98 +2,13 @@
 
 <div class="row" id="blog-page">
   <div class="col-lg-9 ">
-    <!--blog start-->
     @foreach (var post in Model)
     {
       @Html.Partial("_Post", post)
-  }
+    }
   </div>
 
-
-  <div class="col-lg-3">
-    <div class="blog-side-item">
-      <div class="search-row">
-        <input type="text" class="form-control" placeholder="Search here">
-      </div>
-      <div class="category">
-        <h3>Categories</h3>
-        <ul class="list-unstyled">
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> Shipping</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> Accounting</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> Employees</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> Shipping</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> Receiving</a></li>
-        </ul>
-      </div>
-
-      <div class="blog-post">
-        <h3>Latest Blog Post</h3>
-        <div class="media">
-          <a class="pull-left" href="javascript:;">
-            <img class=" " src="http://placehold.it/81&text=Blog+Image" alt="">
-          </a>
-          <div class="media-body">
-            <h5 class="media-heading"><a href="javascript:;">02 May 2013 </a></h5>
-            <p>
-              Donec id elit non mi porta gravida at eget metus amet int
-            </p>
-          </div>
-        </div>
-        <div class="media">
-          <a class="pull-left" href="javascript:;">
-            <img class=" " src="http://placehold.it/81&text=Blog+Image" alt="">
-          </a>
-          <div class="media-body">
-            <h5 class="media-heading"><a href="javascript:;">02 May 2013 </a></h5>
-            <p>
-              Donec id elit non mi porta gravida at eget metus amet int
-            </p>
-          </div>
-        </div>
-        <div class="media">
-          <a class="pull-left" href="javascript:;">
-            <img class=" " src="http://placehold.it/81&text=Blog+Image" alt="">
-          </a>
-          <div class="media-body">
-            <h5 class="media-heading"><a href="javascript:;">02 May 2013 </a></h5>
-            <p>
-              Donec id elit non mi porta gravida at eget metus amet int
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tags">
-        <h3>Tags</h3>
-        <ul class="list-unstyled tag">
-          <li><a href="#"> Shipping</a></li>
-          <li><a href="#"> Development</a></li>
-          <li><a href="#"> Coming Soon</a></li>
-          <li><a href="#"> Help</a></li>
-          <li><a href="#"> Time Tracking</a></li>
-          <li><a href="#"> Receiving</a></li>
-          <li><a href="#"> Invoicing</a></li>
-          <li><a href="#"> Items</a></li>
-        </ul>
-      </div>
-
-      <div class="archive">
-        <h3>Archive</h3>
-        <ul class="list-unstyled">
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> May 2013</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> April 2013</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> March 2013</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> February 2013</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> January 2013</a></li>
-        </ul>
-      </div>
-
-
-    </div>
-  </div>
-
-  <!--blog end-->
-
+  @Html.Partial("_PostsFooter", Model)
 
   <div class="clearfix"></div>
   <ul class="list-unstyled blog-pagination">
@@ -108,86 +23,4 @@
       </a>
     </li>
   </ul>
-  <div class="clearfix"></div>
-  <div class="col-lg-3">
-    <div class="blog-side-item">
-      <div class="search-row">
-        <input type="text" class="form-control" placeholder="Search here">
-      </div>
-      <div class="category">
-        <h3>Categories</h3>
-        <ul class="list-unstyled">
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> Shipping</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> Accounting</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> Employees</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> Shipping</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> Receiving</a></li>
-        </ul>
-      </div>
-
-      <div class="blog-post">
-        <h3>Latest Blog Post</h3>
-        <div class="media">
-          <a class="pull-left" href="javascript:;">
-            <img class=" " src="http://placehold.it/81&text=Blog+Image" alt="">
-          </a>
-          <div class="media-body">
-            <h5 class="media-heading"><a href="javascript:;">02 May 2013 </a></h5>
-            <p>
-              Donec id elit non mi porta gravida at eget metus amet int
-            </p>
-          </div>
-        </div>
-        <div class="media">
-          <a class="pull-left" href="javascript:;">
-            <img class=" " src="http://placehold.it/81&text=Blog+Image" alt="">
-          </a>
-          <div class="media-body">
-            <h5 class="media-heading"><a href="javascript:;">02 May 2013 </a></h5>
-            <p>
-              Donec id elit non mi porta gravida at eget metus amet int
-            </p>
-          </div>
-        </div>
-        <div class="media">
-          <a class="pull-left" href="javascript:;">
-            <img class=" " src="http://placehold.it/81&text=Blog+Image" alt="">
-          </a>
-          <div class="media-body">
-            <h5 class="media-heading"><a href="javascript:;">02 May 2013 </a></h5>
-            <p>
-              Donec id elit non mi porta gravida at eget metus amet int
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tags">
-        <h3>Tags</h3>
-        <ul class="list-unstyled tag">
-          <li><a href="#"> Shipping</a></li>
-          <li><a href="#"> Development</a></li>
-          <li><a href="#"> Coming Soon</a></li>
-          <li><a href="#"> Help</a></li>
-          <li><a href="#"> Time Tracking</a></li>
-          <li><a href="#"> Receiving</a></li>
-          <li><a href="#"> Invoicing</a></li>
-          <li><a href="#"> Items</a></li>
-        </ul>
-      </div>
-
-      <div class="archive">
-        <h3>Archive</h3>
-        <ul class="list-unstyled">
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> Febuary 2015</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> January 2013</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> December 2013</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> November 2013</a></li>
-          <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> October 2013</a></li>
-        </ul>
-      </div>
-
-
-    </div>
-  </div>
 </div>

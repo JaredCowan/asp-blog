@@ -66,7 +66,7 @@ namespace simpleblog.Controllers
 
         } // End Tag
 
-        public ActionResult Show(string idAndSlug)
+        public ActionResult Show(string idAndSlug, int page = 1)
         {
             var parts = SeperateIdAndSlug(idAndSlug);
             if (parts == null)

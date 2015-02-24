@@ -640,6 +640,8 @@
     <Content Include="Views\Signup\Index.cshtml" />
     <Content Include="Views\Layout\Navbar.cshtml" />
     <Content Include="Views\Layout\Homebar.cshtml" />
+    <Content Include="Views\Layout\TagCloud.cshtml" />
+    <Content Include="Views\Posts\_PostsFooter.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
