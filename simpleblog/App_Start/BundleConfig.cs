@@ -12,11 +12,13 @@ namespace simpleblog.App_Start
         {
             bundles.Add(new StyleBundle("~/admin/styles")
                 .Include("~/content/styles/depend/bootstrap.css")
+                .Include("~/content/styles/depend/bootstrap.css.map")
                 .Include("~/content/styles/dist/backend.css"));
 
             bundles.Add(new StyleBundle("~/styles")
                 .Include("~/content/styles/depend/theme.css")
                 .Include("~/content/styles/depend/bootstrap.css")
+                .Include("~/content/styles/depend/bootstrap.css.map")
                 .Include("~/content/styles/depend/font-awesome.css")
                 .Include("~/content/styles/depend/fancybox/fancybox.css")
                 .Include("~/content/styles/depend/style.css")
